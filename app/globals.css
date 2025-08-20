@@ -35,3 +35,17 @@ body {
   text-align: center;
   vertical-align: middle;
 }
+
+.hero-text-font {
+  font-family: 'Inter', sans-serif;
+  font-weight: 200;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
