@@ -2,7 +2,7 @@
 
 export default function SectionSec() {
   return (
-    <div className="min-h-screen bg-[#f5f1eb] py-6 md:py-12 lg:py-48 ">
+    <div data-aos="fade-up" className="min-h-screen bg-[#f5f1eb] py-6 md:py-12 lg:py-48 translate-y-0 opacity-100 transform transition-all duration-700 ease-in-out" id="explore-more">
       <div className="mx-2 x-auto ">
         {/* Main Grid Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
