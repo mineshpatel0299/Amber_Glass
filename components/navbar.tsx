@@ -9,7 +9,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-2 left-2 right-2 sm:top-4 sm:left-4 sm:right-4 z-50 bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl shadow-2xl border border-white/20 font-inter">
-      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-10">
+      <div className="max-w-8xl mx-auto px-12 ">
         <div className="flex items-center justify-between h-14 sm:h-16">
           {/* Logo */}
           <div className="flex-shrink-0 w-32 h-8 sm:w-48 sm:h-12 md:w-72 md:h-45">
