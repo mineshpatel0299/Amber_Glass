@@ -67,7 +67,8 @@ export default function HomePage() {
             {/* Responsive positioned image */}
             <div
               className="hiddden md:absolute 
-            left-[45%] top-[45%] sm:left-[50%] sm:top-[50%] 
+            left-[45%] top-[45%] 
+            sm:left-[50%] sm:top-[50%] 
             md:left-[55%] md:top-[52%] 
             lg:left-[350px] lg:top-[450px] 
             xl:left-[400px] xl:top-[540px] 
