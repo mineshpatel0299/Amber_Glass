@@ -10,9 +10,9 @@ export default function SectionSec() {
           <div className="lg:col-span-6">
             <div className="mb-12 lg:mb-16">
           <h1 className="text-[#567387]  text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-wide mb-8">
-            <span className="text-2xl md:text-3xl lg:text-4xl">AT</span>{" "}
+            <span className="text-2xl md:text-3xl lg:text-5xl">AT</span>{" "}
             <span className="font-normal">AMBER</span>{" "}
-            <span className="font-normal">GLASSES</span>{" "}
+            {/* <span className="font-normal">GLASSES</span>{" "} */}
             {/* <span className="font-normal"></span> */}
           </h1>
 
@@ -37,7 +37,7 @@ export default function SectionSec() {
           {/* Stats Grid */}
           <div className="lg:col-span-6 grid grid-cols-1 md:grid-cols-2 ">
             {/* Years Experience */}
-            <div className=" p-6 md:p-8  border border-l-0 border-gray-700 flex justify-end flex-col">
+            <div className=" p-6 md:p-8 border-r-0 md:border-r border-b-0 md:border-b border border-l-0 border-gray-700 flex justify-end flex-col">
               <div className="text-right flex flex-row gap-3 justify-center items-center">
                 <p className="text-[#1a3446]  text-sm md:text-base leading-tight">
                   years into reimagining spaces—and rewriting the rules of
