@@ -56,7 +56,7 @@ export default function HomePage() {
                       <span>spaces one</span>
                     </span>
                     <span className="block animate-fade-in-up animate-delay-2">
-                      glasses at a time
+                      glass at a time
                     </span>
                     {/* <span className="block animate-fade-in-up animate-delay-3">
                       at a time
@@ -102,19 +102,18 @@ export default function HomePage() {
 
             {/* Bottom Right - CTA Section */}
             <div
-              className={`flex flex-col  gap-4 text-right pb-20 mr-12 max-w-xs sm:max-w-sm md:max-w-md px-4 sm:px-8 md:px-12 lg:px-16 ${
+              className={`flex flex-col  gap-4 text-right pb-5 mr-5 max-w-xs sm:max-w-sm md:max-w-md px-4 sm:px-8 md:px-12 lg:px-16 ${
                 isLoaded
                   ? "animate-slide-in-right animate-delay-2"
                   : "opacity-0"
               }`}
             >
-              <p className="text-white/90 text-xs sm:text-lg md:text-lg leading-relaxed mb-4 sm:mb-5 md:mb-6">
-                Should guide your new experience, one step at a time, toward
-                your dreamspace living.
+              <p className="text-white/90 text-xs sm:text-sm md:text-base leading-relaxed mb-4 sm:mb-5 md:mb-6">
+                Framing your journey toward dream living — one transparent layer at a time.
               </p>
               <Link href="#explore-more">
                 <Button
-                  className="bg-white text-black hover:bg-white/90 px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-6 rounded-full font-medium text-xs sm:text-lg tracking-wide hover:scale-105 transform -translate-y-1/2 "
+                  className="bg-white text-black hover:bg-white/90 px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-6 rounded-full font-medium text-xs sm:text-sm tracking-wide hover:scale-105 transform -translate-y-1/2 "
                   onClick={() => setExplored(true)}
                 >
                   Explore More
