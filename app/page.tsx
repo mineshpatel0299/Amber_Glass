@@ -37,7 +37,7 @@ export default function HomePage() {
 
         <div className="relative z-10 flex min-h-screen flex-col justify-between py-4 sm:py-6 md:py-8 lg:py-12 xl:py-16">
           <div className="flex flex-1 justify-between">
-            <div className="flex-1 max-w-sm sm:max-w-sm md:max-w-md lg:max-w-2xl xl:max-w-3xl 2xl:max-w-3xl mt-32 sm:mt-20 md:mt-24 lg:mt-32 xl:mt-[150px] ml-1 px-4 sm:px-6 md:px-8 lg:px-0">
+            <div className="flex-1 max-w-sm sm:max-w-sm md:max-w-md lg:max-w-2xl xl:max-w-4xl 2xl:max-w-4xl mt-32 sm:mt-20 md:mt-24 lg:mt-32 xl:mt-[150px] ml-1 px-4 sm:px-6 md:px-8 lg:px-0">
               <div
                 className={`space-y-2 sm:space-y-3 md:space-y-4 ${
                   isLoaded ? "opacity-100" : "opacity-0"
@@ -53,14 +53,14 @@ export default function HomePage() {
                   >
                     <span className="bloc animate-fade-in-up animate-delay-1 flex flex-row items-center gap-1 sm:gap-6">
                       <WordRotate words={["Innovation", "Elevate"]} />{" "}
-                      <span>spaces</span>
+                      <span>spaces one</span>
                     </span>
                     <span className="block animate-fade-in-up animate-delay-2">
-                      one glasses
+                      glasses at a time
                     </span>
-                    <span className="block animate-fade-in-up animate-delay-3">
+                    {/* <span className="block animate-fade-in-up animate-delay-3">
                       at a time
-                    </span>
+                    </span> */}
                   </h1>
                 </div>
               </div>
@@ -102,19 +102,19 @@ export default function HomePage() {
 
             {/* Bottom Right - CTA Section */}
             <div
-              className={`text-right max-w-xs sm:max-w-sm md:max-w-md px-4 sm:px-8 md:px-12 lg:px-16 ${
+              className={`flex flex-col  gap-4 text-right pb-20 mr-12 max-w-xs sm:max-w-sm md:max-w-md px-4 sm:px-8 md:px-12 lg:px-16 ${
                 isLoaded
                   ? "animate-slide-in-right animate-delay-2"
                   : "opacity-0"
               }`}
             >
-              <p className="text-white/90 text-xs sm:text-sm md:text-base leading-relaxed mb-4 sm:mb-5 md:mb-6">
+              <p className="text-white/90 text-xs sm:text-lg md:text-lg leading-relaxed mb-4 sm:mb-5 md:mb-6">
                 Should guide your new experience, one step at a time, toward
                 your dreamspace living.
               </p>
               <Link href="#explore-more">
                 <Button
-                  className="bg-white text-black hover:bg-white/90 px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 rounded-full font-medium text-xs sm:text-sm tracking-wide hover:scale-105 transform -translate-y-1/2 "
+                  className="bg-white text-black hover:bg-white/90 px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-6 rounded-full font-medium text-xs sm:text-lg tracking-wide hover:scale-105 transform -translate-y-1/2 "
                   onClick={() => setExplored(true)}
                 >
                   Explore More
