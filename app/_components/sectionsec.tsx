@@ -11,9 +11,9 @@ export default function SectionSec() {
             <div className="mb-12 lg:mb-16">
           <h1 className="text-[#3f2419] text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-wide mb-8">
             <span className="text-2xl md:text-3xl lg:text-4xl">AT</span>{" "}
-            <span className="font-normal">OURA</span>{" "}
-            <span className="font-normal">&</span>{" "}
-            <span className="font-normal">CO.,</span>
+            <span className="font-normal">AMBER</span>{" "}
+            <span className="font-normal">GLASSES</span>{" "}
+            {/* <span className="font-normal"></span> */}
           </h1>
 
           <div className="max-w-md">

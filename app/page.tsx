@@ -10,6 +10,8 @@ import { HeroParallaxDemo } from "./_components/section-third";
 import Image from "next/image";
 import Link from "next/link";
 import { Footerdemo } from "@/components/ui/footer-section";
+import { CompareDemo } from "./_components/comparedemo";
+import CompareGlasses from "./_components/CompareGlasses";
 const helvetica = localFont({
   src: "../public/helvetica-255/helvetica-light-587ebe5a59211.ttf",
 });
@@ -126,8 +128,10 @@ export default function HomePage() {
       {explore && (
         <div>
           <SectionSec />
+           <CompareGlasses/>
           <HeroParallaxDemo />
-          <Footerdemo/>
+         
+          <Footerdemo />
         </div>
       )}
     </>

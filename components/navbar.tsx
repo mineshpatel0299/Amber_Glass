@@ -8,8 +8,8 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <nav className="fixed top-2 left-2 right-2 sm:top-4 sm:left-4 sm:right-4 z-50 bg-[#3f2419] backdrop-blur-2xl rounded-xl sm:rounded-2xl shadow-2xl border border-white/20 font-inter">
-      <div className="max-w-8xl mx-auto px-2 md:px-12 ">
+    <nav className="fixed top-2 left-2 right-2 sm:top-4 sm:left-4 sm:right-4 z-50 bg-gradient-to-r from-white/25 via-white/20 to-white/25 backdrop-blur-3xl rounded-xl sm:rounded-2xl shadow-2xl border border-white/30 font-inter before:absolute before:inset-0 before:rounded-xl before:sm:rounded-2xl before:bg-gradient-to-b before:from-white/10 before:to-transparent before:pointer-events-none">
+      <div className="max-w-8xl mx-auto px-2 md:px-12 relative z-10">
         <div className="flex items-center justify-between h-14 sm:h-16">
           {/* Logo */}
           <div className="flex-shrink-0 w-32 h-32 sm:w-48 sm:h-12 md:w-72 md:h-45">
@@ -18,34 +18,34 @@ export default function Navbar() {
               alt="Amber Glass India"
               width={220}
               height={75}
-              className="h-full w-auto object-contain"
+              className="h-full w-auto object-contain drop-shadow-lg"
             />
           </div>
 
           {/* Navigation Links - Desktop */}
-          <div className="hidden lg:block">
+          <div className="hidden lg:block ">
             <div className="ml-10 flex items-baseline space-x-6 xl:space-x-8">
               <a
                 href="#home"
-                className="text-white hover:text-white/80 px-2 py-2 text-sm font-normal transition-all duration-200 hover:bg-white/10 hover:rounded-md drop-shadow-md"
+                className="text-amber-800 hover:text-amber-700 px-2 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg hover:backdrop-blur-sm"
               >
                 Home
               </a>
               <a
                 href="#about"
-                className="text-white hover:text-white/80 px-2 py-2 text-sm font-normal transition-all duration-200 hover:bg-white/10 hover:rounded-md drop-shadow-md"
+                className="text-amber-800 hover:text-amber-700 px-2 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg hover:backdrop-blur-sm"
               >
                 About Us
               </a>
               <a
                 href="#products"
-                className="text-white hover:text-white/80 px-2 py-2 text-sm font-normal transition-all duration-200 hover:bg-white/10 hover:rounded-md drop-shadow-md"
+                className="text-amber-800 hover:text-amber-700 px-2 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg hover:backdrop-blur-sm"
               >
                 Products
               </a>
               <a
                 href="#partner"
-                className="text-white hover:text-white/80 px-2 py-2 text-sm font-normal transition-all duration-200 hover:bg-white/10 hover:rounded-md drop-shadow-md"
+                className="text-amber-800 hover:text-amber-700 px-2 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg hover:backdrop-blur-sm"
               >
                 Partner with Us
               </a>
@@ -54,7 +54,7 @@ export default function Navbar() {
 
           {/* Contact Button - Desktop */}
           <div className="hidden lg:block">
-            <Button className="bg-white/20 hover:bg-white/30 text-white border border-white/30 px-4 py-2 text-sm transition-all duration-200 shadow-md hover:shadow-lg hover:rounded-lg font-normal">
+            <Button className="bg-gradient-to-r from-white/30 to-white/20 hover:from-white/40 hover:to-white/30 text-amber-800 hover:text-amber-700 border border-white/40 px-4 py-2 text-sm font-medium transition-all duration-300 shadow-xl hover:shadow-2xl hover:rounded-lg backdrop-blur-sm hover:scale-105">
               Contact
             </Button>
           </div>
@@ -64,7 +64,7 @@ export default function Navbar() {
             <Button
               variant="ghost"
               size="sm"
-              className="text-white hover:text-white/80 hover:bg-white/10 p-2"
+              className="text-amber-800 hover:text-amber-700 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 p-2 hover:shadow-lg transition-all duration-300"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <svg className="h-5 w-5 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -76,37 +76,37 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden border-t border-white/20 mt-2 pt-4 pb-4">
+          <div className="lg:hidden border-t border-white/30 mt-2 pt-4 pb-4 bg-gradient-to-b from-white/10 to-transparent rounded-b-xl backdrop-blur-sm">
             <div className="flex flex-col space-y-3">
               <a
                 href="#home"
-                className="text-white hover:text-white/80 px-3 py-2 text-sm font-normal transition-all duration-200 hover:bg-white/10 hover:rounded-md drop-shadow-md"
+                className="text-amber-800 hover:text-amber-700 px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </a>
               <a
                 href="#about"
-                className="text-white hover:text-white/80 px-3 py-2 text-sm font-normal transition-all duration-200 hover:bg-white/10 hover:rounded-md drop-shadow-md"
+                className="text-amber-800 hover:text-amber-700 px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About Us
               </a>
               <a
                 href="#products"
-                className="text-white hover:text-white/80 px-3 py-2 text-sm font-normal transition-all duration-200 hover:bg-white/10 hover:rounded-md drop-shadow-md"
+                className="text-amber-800 hover:text-amber-700 px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Products
               </a>
               <a
                 href="#partner"
-                className="text-white hover:text-white/80 px-3 py-2 text-sm font-normal transition-all duration-200 hover:bg-white/10 hover:rounded-md drop-shadow-md"
+                className="text-amber-800 hover:text-amber-700 px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Partner with Us
               </a>
-              <Button className="bg-white/20 hover:bg-white/30 text-white border border-white/30 px-4 py-2 text-sm transition-all duration-200 shadow-md hover:shadow-lg hover:rounded-lg font-normal mt-2 w-full">
+              <Button className="bg-gradient-to-r from-white/30 to-white/20 hover:from-white/40 hover:to-white/30 text-amber-800 hover:text-amber-700 border border-white/40 px-4 py-2 text-sm font-medium transition-all duration-300 shadow-xl hover:shadow-2xl hover:rounded-lg mt-2 w-full backdrop-blur-sm">
                 Contact
               </Button>
             </div>
