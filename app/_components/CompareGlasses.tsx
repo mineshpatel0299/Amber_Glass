@@ -23,7 +23,7 @@ export default function CompareGlasses() {
   ];
 
   return (
-    <div className={` bg-[#3f2419] overflow-hidden ${helvetica.className} sm:py-26`} >
+    <div className={` bg-[#567387] overflow-hidden ${helvetica.className} sm:py-26`} >
       <div className="flex flex-col lg:flex-row ">
         
         <div className="flex-1 lg:flex-[2] lg:-mr-56">

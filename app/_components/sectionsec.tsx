@@ -9,7 +9,7 @@ export default function SectionSec() {
           {/* Interior Image */}
           <div className="lg:col-span-6">
             <div className="mb-12 lg:mb-16">
-          <h1 className="text-[#3f2419] text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-wide mb-8">
+          <h1 className="text-[#567387]  text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-wide mb-8">
             <span className="text-2xl md:text-3xl lg:text-4xl">AT</span>{" "}
             <span className="font-normal">AMBER</span>{" "}
             <span className="font-normal">GLASSES</span>{" "}
@@ -17,7 +17,7 @@ export default function SectionSec() {
           </h1>
 
           <div className="max-w-md">
-            <p className="text-[#3f2419] text-base md:text-lg leading-relaxed">
+            <p className="text-[#1a3446]  text-base md:text-lg leading-relaxed">
               We believe interior design is more than just aesthetics — it's
               about creating spaces that inspire, function beautifully, and
               reflect the people who live or work in them.
@@ -26,7 +26,7 @@ export default function SectionSec() {
         </div>
             <div className="aspect-[4/3] bg-gray-200 rounded-lg overflow-hidden">
               <img
-                src="https://res.cloudinary.com/dsalsyu0z/image/upload/v1741605730/career3x_pq2j7h.png"
+                src="https://res.cloudinary.com/dsalsyu0z/image/upload/v1756043732/3-2_xfco8l.jpg"
                 alt="Interior design objects and pottery"
                 className="w-full h-full object-cover"
               />
@@ -39,11 +39,11 @@ export default function SectionSec() {
             {/* Years Experience */}
             <div className=" p-6 md:p-8  border border-l-0 border-gray-700 flex justify-end flex-col">
               <div className="text-right flex flex-row gap-3 justify-center items-center">
-                <p className="text-[#3f2419] text-sm md:text-base leading-tight">
+                <p className="text-[#1a3446]  text-sm md:text-base leading-tight">
                   years into reimagining spaces—and rewriting the rules of
                   interior design.
                 </p>
-                <div className="font-bold text-6xl md:text-7xl lg:text-5xl text-[#3f2419] leading-none mb-2">
+                <div className="font-bold text-6xl md:text-7xl lg:text-5xl text-[#1a3446]  leading-none mb-2">
                   4
                 </div>
               </div>
@@ -52,11 +52,11 @@ export default function SectionSec() {
             {/* Designers Count */}
             <div className=" p-6 md:p-8  border-y border-gray-700 flex justify-end flex-col">
               <div className="text-right flex flex-row gap-3 justify-center items-center">
-                <p className="text-[#3f2419] text-sm md:text-base leading-tight">
+                <p className="text-[#1a3446]  text-sm md:text-base leading-tight">
                   years into reimagining spaces—and rewriting the rules of
                   interior design.
                 </p>
-                <div className="font-bold text-6xl md:text-7xl lg:text-5xl text-[#3f2419] leading-none mb-2">
+                <div className="font-bold text-6xl md:text-7xl lg:text-5xl text-[#1a3446]  leading-none mb-2">
                   4
                 </div>
               </div>
@@ -65,18 +65,18 @@ export default function SectionSec() {
             {/* Projects Count */}
             <div className=" p-6 md:p-8  flex justify-end flex-col">
               <div className="text-right flex flex-row gap-3 justify-center items-center">
-                <p className="text-[#3f2419] text-sm md:text-base leading-tight">
+                <p className="text-[#1a3446]  text-sm md:text-base leading-tight">
                   years into reimagining spaces—and rewriting the rules of
                   interior design.
                 </p>
-                <div className="font-bold text-6xl md:text-7xl lg:text-5xl text-[#3f2419] leading-none mb-2">
+                <div className="font-bold text-6xl md:text-7xl lg:text-5xl text-[#1a3446]  leading-none mb-2">
                   62
                 </div>
               </div>
             </div>
 
             {/* Philosophy Block */}
-            <div className="bg-[#3f2419] p-6 md:p-8  text-white flex flex-col justify-between">
+            <div className="bg-[#567387] p-6 md:p-8  text-white flex flex-col justify-between">
               <p className="text-base md:text-lg leading-relaxed mb-6">
                 Design isn't just what you see — it's how a space lives with
                 you.
