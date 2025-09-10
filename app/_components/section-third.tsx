@@ -24,7 +24,6 @@ export const products = [
     thumbnail:
       "https://res.cloudinary.com/dsalsyu0z/image/upload/v1755882376/ChatGPT_Image_Aug_22_2025_at_06_04_18_PM_1_hg1giw.png",
   },
-
   {
     title: "Editorially",
     link: "https://editorially.org",

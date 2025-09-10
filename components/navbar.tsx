@@ -62,25 +62,33 @@ export default function Navbar() {
             <div className="ml-10 flex items-baseline space-x-6 xl:space-x-8">
               <a
                 href="#home"
-                className="text-[#567387]  hover:text-amber-700 px-2 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg hover:backdrop-blur-sm"
+                className={`${
+                  scrolled ? "text-[#567387]" : "text-white"
+                } hover:text-amber-700 px-2 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg hover:backdrop-blur-sm`}
               >
                 Home
               </a>
               <a
-                href="#about"
-                className="text-[#567387]  hover:text-amber-700 px-2 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg hover:backdrop-blur-sm"
+                href="/about"
+                className={`${
+                  scrolled ? "text-[#567387]" : "text-white"
+                } hover:text-amber-700 px-2 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg hover:backdrop-blur-sm`}
               >
                 About Us
               </a>
               <a
                 href="#products"
-                className="text-[#567387]  hover:text-amber-700 px-2 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg hover:backdrop-blur-sm"
+                className={`${
+                  scrolled ? "text-[#567387]" : "text-white"
+                } hover:text-amber-700 px-2 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg hover:backdrop-blur-sm`}
               >
                 Products
               </a>
               <a
                 href="#partner"
-                className="text-[#567387]  hover:text-amber-700 px-2 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg hover:backdrop-blur-sm"
+                className={`${
+                  scrolled ? "text-[#567387]" : "text-white"
+                } hover:text-amber-700 px-2 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg hover:backdrop-blur-sm`}
               >
                 Partner with Us
               </a>
@@ -89,7 +97,13 @@ export default function Navbar() {
 
           {/* Contact Button - Desktop */}
           <div className="hidden lg:block">
-            <Button className="bg-gradient-to-r from-white/30 to-white/20 hover:from-white/40 hover:to-white/30 text-[#567387]  hover:text-amber-700 border border-white/40 px-4 py-2 text-sm font-medium transition-all duration-300 shadow-xl hover:shadow-2xl hover:rounded-lg backdrop-blur-sm hover:scale-105">
+            <Button
+              className={`${
+                scrolled
+                  ? "bg-gradient-to-r from-white/30 to-white/20 hover:from-white/40 hover:to-white/30 text-[#567387] hover:text-amber-700 border border-white/40"
+                  : "bg-white/20 hover:bg-white/30 text-white border border-white/50"
+              } px-4 py-2 text-sm font-medium transition-all duration-300 shadow-xl hover:shadow-2xl hover:rounded-lg backdrop-blur-sm hover:scale-105`}
+            >
               Contact
             </Button>
           </div>
@@ -99,7 +113,9 @@ export default function Navbar() {
             <Button
               variant="ghost"
               size="sm"
-              className="text-[#567387]  hover:text-amber-700 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 p-2 hover:shadow-lg transition-all duration-300"
+              className={`${
+                scrolled ? "text-[#567387]" : "text-white"
+              } hover:text-amber-700 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 p-2 hover:shadow-lg transition-all duration-300`}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <svg
@@ -125,33 +141,47 @@ export default function Navbar() {
             <div className="flex flex-col space-y-3">
               <a
                 href="#home"
-                className="text-[#567387]  hover:text-amber-700 px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg"
+                className={`${
+                  scrolled ? "text-[#567387]" : "text-white"
+                } hover:text-amber-700 px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </a>
               <a
-                href="#about"
-                className="text-[#567387]  hover:text-amber-700 px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg"
+                href="/about"
+                className={`${
+                  scrolled ? "text-[#567387]" : "text-white"
+                } hover:text-amber-700 px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 About Us
               </a>
               <a
                 href="#products"
-                className="text-[#567387]  hover:text-amber-700 px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg"
+                className={`${
+                  scrolled ? "text-[#567387]" : "text-white"
+                } hover:text-amber-700 px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Products
               </a>
               <a
                 href="#partner"
-                className="text-[#567387]  hover:text-amber-700 px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg"
+                className={`${
+                  scrolled ? "text-[#567387]" : "text-white"
+                } hover:text-amber-700 px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Partner with Us
               </a>
-              <Button className="bg-gradient-to-r from-white/30 to-white/20 hover:from-white/40 hover:to-white/30 text-[#567387]  hover:text-amber-700 border border-white/40 px-4 py-2 text-sm font-medium transition-all duration-300 shadow-xl hover:shadow-2xl hover:rounded-lg mt-2 w-full backdrop-blur-sm">
+              <Button
+                className={`${
+                  scrolled
+                    ? "bg-gradient-to-r from-white/30 to-white/20 hover:from-white/40 hover:to-white/30 text-[#567387] hover:text-amber-700 border border-white/40"
+                    : "bg-white/20 hover:bg-white/30 text-white border border-white/50"
+                } px-4 py-2 text-sm font-medium transition-all duration-300 shadow-xl hover:shadow-2xl hover:rounded-lg mt-2 w-full backdrop-blur-sm`}
+              >
                 Contact
               </Button>
             </div>
