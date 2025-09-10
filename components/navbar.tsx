@@ -2,11 +2,19 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation"; // Import useRouter
 import { Button } from "./ui/button";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const router = useRouter(); // Initialize useRouter
+
+  const handleSmoothScroll = (path: string) => {
+    setIsMenuOpen(false); // Close mobile menu if open
+    router.push(path);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,7 +32,10 @@ export default function Navbar() {
       <div className="max-w-8xl mx-auto px-2 md:px-12 relative z-10">
         <div className="flex items-center justify-between h-14 sm:h-16">
           <div className="flex items-center justify-between h-14 sm:h-16">
-            <div className="flex-shrink-0t w-32 h-8 sm:w-48 sm:h-12 md:w-72 md:h-12 relative overflow-hidden">
+            <div
+              className="flex-shrink-0t w-32 h-8 sm:w-48 sm:h-12 md:w-72 md:h-12 relative overflow-hidden cursor-pointer"
+              onClick={() => handleSmoothScroll("/")}
+            >
               <div
                 className={`absolute w-48 inset-0 transition-all duration-700 ease-in-out ${
                   scrolled
@@ -61,10 +72,10 @@ export default function Navbar() {
           <div className="hidden lg:block ">
             <div className="ml-10 flex items-baseline space-x-6 xl:space-x-8">
               <a
-                href="#home"
+                onClick={() => handleSmoothScroll("/")}
                 className={`${
                   scrolled ? "text-[#567387]" : "text-white"
-                } hover:text-amber-700 px-2 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg hover:backdrop-blur-sm`}
+                } hover:text-amber-700 px-2 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg hover:backdrop-blur-sm cursor-pointer`}
               >
                 Home
               </a>
@@ -140,11 +151,10 @@ export default function Navbar() {
           <div className="lg:hidden border-t border-white/30 mt-2 pt-4 pb-4 bg-gradient-to-b from-white/10 to-transparent rounded-b-xl backdrop-blur-sm">
             <div className="flex flex-col space-y-3">
               <a
-                href="#home"
+                onClick={() => handleSmoothScroll("/")}
                 className={`${
                   scrolled ? "text-[#567387]" : "text-white"
-                } hover:text-amber-700 px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg`}
-                onClick={() => setIsMenuOpen(false)}
+                } hover:text-amber-700 px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg cursor-pointer`}
               >
                 Home
               </a>
@@ -178,7 +188,7 @@ export default function Navbar() {
               <Button
                 className={`${
                   scrolled
-                    ? "bg-gradient-to-r from-white/30 to-white/20 hover:from-white/40 hover:to-white/30 text-[#567387] hover:text-amber-700 border border-white/40"
+                    ? "bg-gradient-to-r from-white/30 to-white/20 hover:from-white/40 hover:to-white/30 text-[#567387]"
                     : "bg-white/20 hover:bg-white/30 text-white border border-white/50"
                 } px-4 py-2 text-sm font-medium transition-all duration-300 shadow-xl hover:shadow-2xl hover:rounded-lg mt-2 w-full backdrop-blur-sm`}
               >
