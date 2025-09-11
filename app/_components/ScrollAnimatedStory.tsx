@@ -62,12 +62,11 @@ export default function ScrollAnimatedStory() {
 
         // Calculate which story should be shown based on scroll progress
         // Each story gets equal scroll space except the last one gets more time to stay visible
-        if (scrollProgress >= 0.85) {
-          // Last story (id:4) stays visible for the final 15% of scroll
+        if (scrollProgress >= 0.7) {
           setCurrentStoryIndex(numItems - 1)
         } else {
-          // First 3 stories share the first 85% of scroll space
-          const adjustedProgress = scrollProgress / 0.95
+          // First 3 stories share the first 70% of scroll space
+          const adjustedProgress = scrollProgress / 0.7
           const newIndex = Math.floor(adjustedProgress * (numItems - 1))
           setCurrentStoryIndex(Math.min(newIndex, numItems - 2))
         }
@@ -81,34 +80,54 @@ export default function ScrollAnimatedStory() {
   const currentStory = storyContent[currentStoryIndex] || storyContent[0]
 
   return (
-    <div className="relative h-[350vh] bg-white" ref={containerRef}>
-      <div className="sticky top-0 h-[120vh] flex items-center justify-center overflow-hidden">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="relative h-[500vh] bg-white" ref={containerRef}>
+      <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           {/* Content Section */}
-          <div className="relative z-10 p-8">
+          <div className="relative z-10 p-12">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentStory.id}
-                initial={{ y: 50, opacity: 0 }}
+                initial={{ y: 100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                exit={{ y: -50, opacity: 0 }}
-                transition={{ duration: 0.5 }}
+                exit={{ y: -100, opacity: 0 }}
+                transition={{
+                  duration: 0.8,
+                  ease: [0.25, 0.46, 0.45, 0.94],
+                  staggerChildren: 0.2,
+                }}
               >
-                <h2 className="text-5xl font-bold text-gray-800 mb-8">{currentStory.title}</h2>
-                <div className="text-xl text-gray-700" dangerouslySetInnerHTML={{ __html: currentStory.description }} />
+                <motion.h2
+                  className="text-6xl lg:text-7xl font-bold text-gray-800 mb-12 leading-tight"
+                  initial={{ y: 80, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.8, delay: 0.1 }}
+                >
+                  {currentStory.title}
+                </motion.h2>
+                <motion.div
+                  className="text-2xl text-gray-700 leading-relaxed"
+                  dangerouslySetInnerHTML={{ __html: currentStory.description }}
+                  initial={{ y: 60, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.8, delay: 0.3 }}
+                />
               </motion.div>
             </AnimatePresence>
           </div>
 
           {/* Image Section */}
-          <div className="relative w-full h-[500px] rounded-lg overflow-hidden shadow-xl">
+          <div className="relative w-full h-[600px] lg:h-[700px] rounded-2xl overflow-hidden shadow-2xl">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentStory.id}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.5 }}
+                initial={{ y: 120, opacity: 0, scale: 0.95 }}
+                animate={{ y: 0, opacity: 1, scale: 1 }}
+                exit={{ y: -120, opacity: 0, scale: 1.05 }}
+                transition={{
+                  duration: 0.9,
+                  ease: [0.25, 0.46, 0.45, 0.94],
+                }}
                 className="absolute inset-0"
               >
                 <Image
