@@ -14,14 +14,14 @@ interface StoryItem {
 const storyContent: StoryItem[] = [
   {
     id: 1,
-    image: "/Ascroll1.jpg",
+    image: "/Ascroll4.jpeg",
     title: "WHO ARE WE, REALLY?",
     description:
       "We’re not just about glass films.We’re about transforming blank spaces into bold statements.Welcome to Amber Glass India — where your glass tells a story.",
   },
   {
     id: 2,
-    image: "/AScroll3.jpg",
+    image: "/AScroll5.jpeg",
     title: "WHAT DO WE DO?",
     description: `
       <ul style="list-style-type: disc; padding-left: 20px;">
@@ -34,14 +34,14 @@ const storyContent: StoryItem[] = [
   },
   {
     id: 3,
-    image: "/aboutbg.png",
+    image: "/Ascroll6.jpeg",
     title: "WHY WE EXIST?",
     description:
       "Because space isn’t just space.It’s where stories are told, dreams are lived, and memories are made. And your environment should reflect that beauty — without compromise.",
   },
   {
     id: 4,
-    image: "/AScroll2.jpg",
+    image: "/AScroll7.jpg",
     title: "WHAT DO WE SERVE?",
     description:
       "Homeowners, Gym & Studio Owners, Interior Designers, Wedding Planners, Architects, Photographers …and you.",
