@@ -1,65 +1,115 @@
-"use client";
-import React from "react";
-import localFont from "next/font/local";
-import { motion } from "framer-motion"; // Using framer-motion for animations
+import Image from 'next/image';
+import { Footerdemo } from '@/components/ui/footer-section';
 
-const helvetica = localFont({
-  src: "../../public/helvetica-255/helvetica-light-587ebe5a59211.ttf",
-});
-
-const AboutUsPage = () => {
+export default function AboutUsPage() {
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex flex-col items-center justify-center py-16 px-4 sm:px-6 lg:px-8">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="max-w-4xl mx-auto text-center"
-      >
-        <h1 className={`text-4xl sm:text-5xl md:text-6xl font-bold mb-6 ${helvetica.className}`}>
-          About Amber Glass India
-        </h1>
-        <p className={`text-lg sm:text-xl mb-8 leading-relaxed ${helvetica.className}`}>
-          At Amber Glass India, we believe in transforming spaces and elevating experiences through the timeless beauty and versatility of glass. With a legacy of craftsmanship and a commitment to innovation, we are dedicated to providing high-quality glass solutions that inspire and endure.
-        </p>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-          className="text-left mt-12"
-        >
-          <h2 className={`text-3xl sm:text-4xl font-semibold mb-4 ${helvetica.className}`}>Our Vision</h2>
-          <p className={`text-md sm:text-lg mb-6 leading-relaxed ${helvetica.className}`}>
-            To be the leading provider of innovative glass products and services, recognized for our exceptional quality, sustainable practices, and unwavering dedication to customer satisfaction. We envision a world where glass is not just a material, but a medium for artistic expression and functional excellence.
+    <>
+      <div className="relative w-full h-screen flex items-center">
+        <Image
+          src="/aboutbg.png" // Using an existing background image
+          alt="About Us Background"
+          fill
+          style={{ objectFit: 'cover' }}
+          quality={100}
+          className="absolute inset-0 z-0"
+        />
+        <div className="relative z-10 text-white text-left p-8 rounded-lg max-w-2xl ml-8">
+          <h1 className="text-5xl font-bold mb-4">About Amber Glass</h1>
+          <p className="text-lg mb-4">
+            Founded with a vision to transform the industry, Amber has been at the forefront of innovation for over a decade. Our commitment to excellence and customer satisfaction has made us a trusted partner for businesses worldwide.
+          </p>
+          <p className="text-lg">
+            We believe in creating lasting relationships with our clients through transparent communication, reliable service, and cutting-edge solutions that drive real results.
+          </p>
+        </div>
+      </div>
+
+      <div className="bg-white py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl font-bold text-gray-800 mb-8">WHO WE WORK WITH</h2>
+          <p className="text-lg text-gray-600 mb-12">
+            Interior Designers | Architects | Photo Studios | Event Planners | Gym & Fitness Studios
+            <br />
+            Educational Institutions | Luxury Homeowners | Corporate Offices | Retail Spaces
           </p>
 
-          <h2 className={`text-3xl sm:text-4xl font-semibold mb-4 mt-8 ${helvetica.className}`}>Our Mission</h2>
-          <p className={`text-md sm:text-lg mb-6 leading-relaxed ${helvetica.className}`}>
-            To craft and deliver superior glass products that meet the diverse needs of our clients, from architectural marvels to intricate interior designs. We are committed to fostering a culture of creativity, precision, and environmental responsibility in every facet of our operations.
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-gray-50 p-8 rounded-lg shadow-md">
+              <h3 className="text-5xl font-bold text-[#567387] mb-2">500+</h3>
+              <p className="text-lg text-gray-700">Happy Clients</p>
+            </div>
+            <div className="bg-gray-50 p-8 rounded-lg shadow-md">
+              <h3 className="text-5xl font-bold text-[#567387] mb-2">1000+</h3>
+              <p className="text-lg text-gray-700">Projects Completed</p>
+            </div>
+            <div className="bg-gray-50 p-8 rounded-lg shadow-md">
+              <h3 className="text-5xl font-bold text-[#567387] mb-2">10+</h3>
+              <p className="text-lg text-gray-700">Years Experience</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-gray-50 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold text-gray-800 mb-4">Everything Your Team Needs to Work Smarter</h2>
+          <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+            From task tracking to real-time chat, our features are built to keep your team connected, organized,
+            and moving forward—together.
           </p>
 
-          <h2 className={`text-3xl sm:text-4xl font-semibold mb-4 mt-8 ${helvetica.className}`}>Why Choose Us?</h2>
-          <ul className={`list-disc list-inside text-md sm:text-lg space-y-2 ${helvetica.className}`}>
-            <li>
-              <strong>Unmatched Quality:</strong> We use only the finest materials and state-of-the-art manufacturing processes to ensure every product meets the highest standards.
-            </li>
-            <li>
-              <strong>Innovative Designs:</strong> Our team of experts constantly explores new possibilities, offering cutting-edge designs and custom solutions.
-            </li>
-            <li>
-              <strong>Customer-Centric Approach:</strong> Your vision is our priority. We work closely with you to bring your ideas to life with precision and care.
-            </li>
-            <li>
-              <strong>Sustainability:</strong> We are committed to eco-friendly practices, minimizing our environmental footprint through responsible sourcing and production.
-            </li>
-            <li>
-              <strong>Experienced Craftsmanship:</strong> With years of experience, our skilled artisans and technicians deliver flawless execution and lasting beauty.
-            </li>
-          </ul>
-        </motion.div>
-      </motion.div>
-    </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Card 1: Built-In Team Chat */}
+            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+              <div className="relative h-64">
+                <Image
+                  src="/hero-background.png" // Using an existing background image
+                  alt="Built-In Team Chat"
+                  fill
+                  style={{ objectFit: 'cover' }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="text-2xl font-bold">Built-In Team Chat</h3>
+                  <p className="text-sm">Communicate instantly within projects—no need to switch apps.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 2: Task Assignment */}
+            <div className="bg-neutral-100 p-8 rounded-lg shadow-md flex flex-col justify-center items-start text-left">
+              <h3 className="text-2xl font-bold text-gray-800 mb-2">Task Assignment</h3>
+              <p className="text-gray-600">Easily create, assign, and track tasks to keep everyone aligned and accountable.</p>
+            </div>
+
+            {/* Card 3: Real-Time Scheduling */}
+            <div className="bg-stone-200 p-8 rounded-lg shadow-md flex flex-col justify-center items-start text-left">
+              <h3 className="text-2xl font-bold text-gray-800 mb-2">Real-Time Scheduling</h3>
+              <p className="text-gray-600">Plan meetings, set deadlines, and sync calendars so your team stays on the same page.</p>
+            </div> 
+
+            {/* Card 4: Progress Tracking */}
+            <div className="bg-green-700 rounded-lg shadow-md overflow-hidden">
+              <div className="relative h-64">
+                <Image
+                  src="/aboutbg.png" // Using an existing background image
+                  alt="Progress Tracking"
+                  fill
+                  style={{ objectFit: 'cover' }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="text-2xl font-bold">Progress Tracking</h3>
+                  <p className="text-sm">Visualize team performance with dashboards that highlight what's done and what's next.</p>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <Footerdemo />
+    </>
   );
-};
-
-export default AboutUsPage;
+}

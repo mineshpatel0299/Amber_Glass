@@ -80,15 +80,15 @@ export default function Navbar() {
                 Home
               </a>
               <a
-                href="/about"
+                onClick={() => handleSmoothScroll("/about")}
                 className={`${
                   scrolled ? "text-[#567387]" : "text-white"
-                } hover:text-amber-700 px-2 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg hover:backdrop-blur-sm`}
+                } hover:text-amber-700 px-2 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg hover:backdrop-blur-sm cursor-pointer`}
               >
                 About Us
               </a>
               <a
-                href="#products"
+                href="/products"
                 className={`${
                   scrolled ? "text-[#567387]" : "text-white"
                 } hover:text-amber-700 px-2 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg hover:backdrop-blur-sm`}
@@ -96,7 +96,7 @@ export default function Navbar() {
                 Products
               </a>
               <a
-                href="#partner"
+                href="/partner"
                 className={`${
                   scrolled ? "text-[#567387]" : "text-white"
                 } hover:text-amber-700 px-2 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg hover:backdrop-blur-sm`}
@@ -159,11 +159,10 @@ export default function Navbar() {
                 Home
               </a>
               <a
-                href="/about"
+                onClick={() => handleSmoothScroll("/about")}
                 className={`${
                   scrolled ? "text-[#567387]" : "text-white"
-                } hover:text-amber-700 px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg`}
-                onClick={() => setIsMenuOpen(false)}
+                } hover:text-amber-700 px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg cursor-pointer`}
               >
                 About Us
               </a>
