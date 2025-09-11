@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { Footerdemo } from '@/components/ui/footer-section';
+import AnimatedCounter from '@/app/_components/animated-counter';
 
 export default function AboutUsPage() {
   return (
@@ -35,15 +36,15 @@ export default function AboutUsPage() {
 
           <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-gray-50 p-8 rounded-lg shadow-md">
-              <h3 className="text-5xl font-bold text-[#567387] mb-2">500+</h3>
+              <AnimatedCounter target={500} suffix="+" className="text-5xl font-bold text-[#567387] mb-2" />
               <p className="text-lg text-gray-700">Happy Clients</p>
             </div>
             <div className="bg-gray-50 p-8 rounded-lg shadow-md">
-              <h3 className="text-5xl font-bold text-[#567387] mb-2">1000+</h3>
+              <AnimatedCounter target={1000} suffix="+" className="text-5xl font-bold text-[#567387] mb-2" />
               <p className="text-lg text-gray-700">Projects Completed</p>
             </div>
             <div className="bg-gray-50 p-8 rounded-lg shadow-md">
-              <h3 className="text-5xl font-bold text-[#567387] mb-2">10+</h3>
+              <AnimatedCounter target={10} suffix="+" className="text-5xl font-bold text-[#567387] mb-2" />
               <p className="text-lg text-gray-700">Years Experience</p>
             </div>
           </div>
@@ -52,10 +53,9 @@ export default function AboutUsPage() {
 
       <div className="bg-gray-50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">Everything Your Team Needs to Work Smarter</h2>
+          <h2 className="text-4xl font-bold text-gray-800 mb-4">Our Work</h2>
           <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
-            From task tracking to real-time chat, our features are built to keep your team connected, organized,
-            and moving forward—together.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, facilis!
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -70,22 +70,22 @@ export default function AboutUsPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                 <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="text-2xl font-bold">Built-In Team Chat</h3>
-                  <p className="text-sm">Communicate instantly within projects—no need to switch apps.</p>
+                  <h3 className="text-2xl font-bold"></h3>Lorem, ipsum dolor.
+                  <p className="text-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
                 </div>
               </div>
             </div>
 
             {/* Card 2: Task Assignment */}
             <div className="bg-neutral-100 p-8 rounded-lg shadow-md flex flex-col justify-center items-start text-left">
-              <h3 className="text-2xl font-bold text-gray-800 mb-2">Task Assignment</h3>
-              <p className="text-gray-600">Easily create, assign, and track tasks to keep everyone aligned and accountable.</p>
+              <h3 className="text-2xl font-bold text-gray-800 mb-2">Lorem, ipsum.</h3>
+              <p className="text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
             </div>
 
             {/* Card 3: Real-Time Scheduling */}
             <div className="bg-stone-200 p-8 rounded-lg shadow-md flex flex-col justify-center items-start text-left">
-              <h3 className="text-2xl font-bold text-gray-800 mb-2">Real-Time Scheduling</h3>
-              <p className="text-gray-600">Plan meetings, set deadlines, and sync calendars so your team stays on the same page.</p>
+              <h3 className="text-2xl font-bold text-gray-800 mb-2">Lorem, ipsum dolor.</h3>
+              <p className="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing..</p>
             </div> 
 
             {/* Card 4: Progress Tracking */}
@@ -99,8 +99,8 @@ export default function AboutUsPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                 <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="text-2xl font-bold">Progress Tracking</h3>
-                  <p className="text-sm">Visualize team performance with dashboards that highlight what's done and what's next.</p>
+                  <h3 className="text-2xl font-bold">Lorem, ipsum.</h3>
+                  <p className="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
                 </div>
               </div>
               
