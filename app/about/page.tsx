@@ -1,6 +1,8 @@
-import Image from 'next/image';
-import { Footerdemo } from '@/components/ui/footer-section';
-import AnimatedCounter from '@/app/_components/animated-counter';
+import Image from "next/image"
+import { Footerdemo } from "@/components/ui/footer-section"
+import AnimatedCounter from "@/app/_components/animated-counter"
+import { BentoGrid, BentoGridItem } from "@/app/_components/bento-grid"
+import ScrollAnimatedStory from "@/app/_components/ScrollAnimatedStory"
 
 export default function AboutUsPage() {
   return (
@@ -10,20 +12,26 @@ export default function AboutUsPage() {
           src="/aboutbg.png" // Using an existing background image
           alt="About Us Background"
           fill
-          style={{ objectFit: 'cover' }}
+          style={{ objectFit: "cover" }}
           quality={100}
           className="absolute inset-0 z-0"
         />
+        <div className="absolute inset-0 bg-black/50 z-5"></div>
         <div className="relative z-10 text-white text-left p-8 rounded-lg max-w-2xl ml-8">
-          <h1 className="text-5xl font-bold mb-4">About Amber Glass</h1>
-          <p className="text-lg mb-4">
-            Founded with a vision to transform the industry, Amber has been at the forefront of innovation for over a decade. Our commitment to excellence and customer satisfaction has made us a trusted partner for businesses worldwide.
+          <h1 className="text-5xl font-bold mb-4 drop-shadow-lg">About Amber Glass</h1>
+          <p className="text-lg mb-4 drop-shadow-md">
+            Founded with a vision to transform the industry, Amber has been at the forefront of innovation for over a
+            decade. Our commitment to excellence and customer satisfaction has made us a trusted partner for businesses
+            worldwide.
           </p>
-          <p className="text-lg">
-            We believe in creating lasting relationships with our clients through transparent communication, reliable service, and cutting-edge solutions that drive real results.
+          <p className="text-lg drop-shadow-md">
+            We believe in creating lasting relationships with our clients through transparent communication, reliable
+            service, and cutting-edge solutions that drive real results.
           </p>
         </div>
       </div>
+
+      <ScrollAnimatedStory />
 
       <div className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -53,63 +61,113 @@ export default function AboutUsPage() {
 
       <div className="bg-gray-50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">Our Work</h2>
-          <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, facilis!
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Card 1: Built-In Team Chat */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="relative h-64">
+          <h2 className="text-4xl font-bold text-gray-800 mb-12">Our Work</h2>
+          <BentoGrid className="max-w-5xl mx-auto">
+            <BentoGridItem
+              key="project-alpha"
+              className="lg:col-span-2"
+              title="Project Alpha"
+              description="A groundbreaking project in eyewear design."
+              header={
                 <Image
-                  src="/hero-background.png" // Using an existing background image
-                  alt="Built-In Team Chat"
-                  fill
-                  style={{ objectFit: 'cover' }}
+                  src="/glass-pattern-1.png"
+                  alt="Project Alpha"
+                  width={500}
+                  height={300}
+                  className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="text-2xl font-bold"></h3>Lorem, ipsum dolor.
-                  <p className="text-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 2: Task Assignment */}
-            <div className="bg-neutral-100 p-8 rounded-lg shadow-md flex flex-col justify-center items-start text-left">
-              <h3 className="text-2xl font-bold text-gray-800 mb-2">Lorem, ipsum.</h3>
-              <p className="text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
-            </div>
-
-            {/* Card 3: Real-Time Scheduling */}
-            <div className="bg-stone-200 p-8 rounded-lg shadow-md flex flex-col justify-center items-start text-left">
-              <h3 className="text-2xl font-bold text-gray-800 mb-2">Lorem, ipsum dolor.</h3>
-              <p className="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing..</p>
-            </div> 
-
-            {/* Card 4: Progress Tracking */}
-            <div className="bg-green-700 rounded-lg shadow-md overflow-hidden">
-              <div className="relative h-64">
+              }
+            />
+            <BentoGridItem
+              key="project-beta"
+              title="Project Beta"
+              description="Innovative solutions for enhanced vision."
+              header={
                 <Image
-                  src="/aboutbg.png" // Using an existing background image
-                  alt="Progress Tracking"
-                  fill
-                  style={{ objectFit: 'cover' }}
+                  src="/glass-pattern-2.png"
+                  alt="Project Beta"
+                  width={500}
+                  height={300}
+                  className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="text-2xl font-bold">Lorem, ipsum.</h3>
-                  <p className="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
-                </div>
-              </div>
-              
-            </div>
-          </div>
+              }
+            />
+            <BentoGridItem
+              key="project-gamma"
+              title="Project Gamma"
+              description="Redefining comfort and style in eyewear."
+              header={
+                <Image
+                  src="/glass-pattern-3.png"
+                  alt="Project Gamma"
+                  width={500}
+                  height={300}
+                  className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"
+                />
+              }
+            />
+            <BentoGridItem
+              key="project-delta"
+              className="lg:col-span-2"
+              title="Project Delta"
+              description="Advanced materials for durable and lightweight frames."
+              header={
+                <Image
+                  src="/glass-pattern-4.png"
+                  alt="Project Delta"
+                  width={500}
+                  height={300}
+                  className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"
+                />
+              }
+            />
+            <BentoGridItem
+              key="project-epsilon"
+              title="Project Epsilon"
+              description="Customizable designs for every individual."
+              header={
+                <Image
+                  src="/hero-background.png"
+                  alt="Project Epsilon"
+                  width={500}
+                  height={300}
+                  className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"
+                />
+              }
+            />
+            <BentoGridItem
+              key="project-zeta"
+              title="Project Zeta"
+              description="Sustainable practices in eyewear manufacturing."
+              header={
+                <Image
+                  src="/aboutbg.png"
+                  alt="Project Zeta"
+                  width={500}
+                  height={300}
+                  className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"
+                />
+              }
+            />
+            <BentoGridItem
+              key="project-eta"
+              title="Project Eta"
+              description="Future-forward eyewear technology."
+              header={
+                <Image
+                  src="/amber-logo.png"
+                  alt="Project Eta"
+                  width={500}
+                  height={300}
+                  className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"
+                />
+              }
+            />
+          </BentoGrid>
         </div>
       </div>
 
       <Footerdemo />
     </>
-  );
+  )
 }
