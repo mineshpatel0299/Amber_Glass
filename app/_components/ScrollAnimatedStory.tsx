@@ -6,15 +6,15 @@ import React from "react";
 const content = [
   {
     // image:"",
-    title: "Who Are We, Really?",
+    title: "Who Are We?",
     description:
       "We’re not just about glass films. We’re about transforming blank spaces into bold statements. Welcome to Amber Glass India — where your glass tells a story.",
     content: (
       <div className="flex h-full w-full items-center justify-center text-white">
         <img
           src="https://res.cloudinary.com/dsalsyu0z/image/upload/v1757661408/DSC00380_3_cyalf6.jpg"
-          width={300}
-          height={300}
+          width={250}
+          height={250}
           className="h-full w-full object-cover"
           alt="linear board demo"
         />
@@ -23,14 +23,20 @@ const content = [
   },
   {
     title: "What Do We Do?",
-    description:
-      "Aesthetic films Privacy and safety Heat and glare control Visual branding",
+    description: (
+      <ul className="list-disc list-inside">
+        <li>Aesthetic films</li>
+        <li>Privacy and safety</li>
+        <li>Heat and glare control</li>
+        <li>Visual branding</li>
+      </ul>
+    ),
     content: (
       <div className="flex h-full w-full items-center justify-center text-white">
         <img
           src="https://res.cloudinary.com/dsalsyu0z/image/upload/v1757661399/WhatsApp_Image_2025-09-12_at_12.44.49_zb4u9t.jpg"
-          width={300}
-          height={300}
+          width={250}
+          height={250}
           className="h-full w-full object-cover"
           alt="linear board demo"
         />
@@ -45,8 +51,8 @@ const content = [
       <div className="flex h-full w-full items-center justify-center text-white">
         <img
           src="https://res.cloudinary.com/dsalsyu0z/image/upload/v1757661399/WhatsApp_Image_2025-09-12_at_12.44.49_2_bomznt.jpg"
-          width={300}
-          height={300}
+          width={250}
+          height={250}
           className="h-full w-full object-cover"
           alt="linear board demo"
         />
@@ -61,8 +67,8 @@ const content = [
       <div className="flex h-full w-full items-center justify-center text-white">
         <img
           src="https://res.cloudinary.com/dsalsyu0z/image/upload/v1757661399/WhatsApp_Image_2025-09-12_at_12.44.49_1_fxoq4u.jpg"
-          width={300}
-          height={300}
+          width={250}
+          height={250}
           className="h-full w-full object-cover"
           alt="linear board demo"
         />
@@ -72,7 +78,7 @@ const content = [
 ];
 export function StickyScrollRevealDemo() {
   return (
-    <div className="w-full py-24 ">
+    <div className="w-full py-24 max-w-7xl mx-auto">
       <StickyScroll content={content} />
     </div>
   );
