@@ -25,7 +25,7 @@ export const StickyScroll = ({
   const cardLength = content.length
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    const cardsBreakpoints = content.map((_, index) => index / cardLength)
+    const cardsBreakpoints = content.map((_, index) => (index + 0.1) / cardLength)
     const closestBreakpointIndex = cardsBreakpoints.reduce((acc, breakpoint, index) => {
       const distance = Math.abs(latest - breakpoint)
       if (distance < Math.abs(latest - cardsBreakpoints[acc])) {
@@ -48,30 +48,35 @@ export const StickyScroll = ({
       //   backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       // }}
       transition={{ duration: 0.9, ease: "easeInOut" }}
-      className="relative flex h-[100svh] justify-center space-x-10 overflow-y-auto rounded-md p-10"
+      className="relative flex h-[100svh] justify-center space-x-0 overflow-y-auto rounded-md p-1"
       ref={ref}
     >
       {/* Left Side Content */}
-      <div className="relative flex w-full items-start px-4">
-        <div className="w-full ">
+      <div className="relative flex w-full items-start">
+        <div className="w-full">
           {content.map((item, index) => (
-            <div key={item.title + index} className="my-20 min-h-screen">
+            <div key={item.title + index} className="my-2 min-h-screen flex flex-col justify-center">
               <motion.div
                 initial={{ opacity: activeCard === index ? 1 : 0.3 }}
                 animate={{ opacity: activeCard === index ? 1 : 0.3 }}
                 transition={{ duration: 0.3 }}
               >
-                <motion.h2 className="text-6xl font-bold text-black">{item.title}</motion.h2>
-                <motion.p className="text-lg mt-10 max-w-sm text-black">{item.description}</motion.p>
+                <motion.h2 className="text-7xl font-bold text-black">{item.title}</motion.h2>
+                <motion.p className="text-xl mt-1 max-w-md text-black">{item.description}</motion.p>
               </motion.div>
             </div>
           ))}
-          <div className="h-40" />
+          <div className="h-20" />
         </div>
       </div>
 
       {/* Right Side Sticky Content */}
-      <div className={cn("sticky top-10 hidden h-[600px] w-[900px] rounded-3xl aspect-auto overflow-hidden lg:block", contentClassName)}>
+      <div
+        className={cn(
+          "sticky top-10 hidden h-[800px] w-[1000px] rounded-3xl aspect-auto overflow-hidden lg:block ml-[-150px]",
+          contentClassName,
+        )}
+      >
         <div className="relative h-full w-full">
           {content.map((item, index) => (
             <motion.div
@@ -82,7 +87,7 @@ export const StickyScroll = ({
                 zIndex: index,
               }}
               transition={{
-                duration: 0.6,
+                duration: 0.4,
                 ease: [0.25, 0.46, 0.45, 0.94],
               }}
               className="absolute inset-0 h-full w-full"

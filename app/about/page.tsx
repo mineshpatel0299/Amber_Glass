@@ -1,9 +1,9 @@
+"use client"
 import Image from "next/image"
 import { Footerdemo } from "@/components/ui/footer-section"
 import AnimatedCounter from "@/app/_components/animated-counter"
 import { BentoGrid, BentoGridItem } from "@/app/_components/bento-grid"
-import ScrollAnimatedStory from "@/app/_components/ScrollAnimatedStory"
-import { StickyScrollRevealDemo } from "./_components/ScrollAnimation"
+import { StickyScrollRevealDemo as ScrollAnimatedStory } from "@/app/_components/ScrollAnimatedStory"
 
 export default function AboutUsPage() {
   return (
@@ -18,9 +18,9 @@ export default function AboutUsPage() {
           className="absolute inset-0 z-0"
         />
         <div className="absolute inset-0 bg-black/50 z-5"></div>
-        <div className="relative z-10 text-white text-left p-8 rounded-lg max-w-2xl ml-8">
-          <h1 className="text-5xl font-bold mb-4 drop-shadow-lg">About Amber Glass</h1>
-          <p className="text-lg mb-4 drop-shadow-md">
+        <div className="relative z-10 text-white text-left p-6 rounded-lg max-w-2xl ml-6">
+          <h1 className="text-5xl font-bold mb-2 drop-shadow-lg">About Amber Glass</h1>
+          <p className="text-lg mb-2 drop-shadow-md">
             Founded with a vision to transform the industry, Amber has been at the forefront of innovation for over a
             decade. Our commitment to excellence and customer satisfaction has made us a trusted partner for businesses
             worldwide.
@@ -34,16 +34,16 @@ export default function AboutUsPage() {
 
       <ScrollAnimatedStory />
 
-      <div className="bg-white py-16">
+      <div className="bg-white py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl font-bold text-gray-800 mb-8">WHO WE WORK WITH</h2>
-          <p className="text-lg text-gray-600 mb-12">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">WHO WE WORK WITH</h2>
+          <p className="text-lg text-gray-600 mb-6">
             Interior Designers | Architects | Photo Studios | Event Planners | Gym & Fitness Studios
             <br />
             Educational Institutions | Luxury Homeowners | Corporate Offices | Retail Spaces
           </p>
 
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-gray-50 p-8 rounded-lg shadow-md">
               <AnimatedCounter target={500} suffix="+" className="text-5xl font-bold text-[#567387] mb-2" />
               <p className="text-lg text-gray-700">Happy Clients</p>
@@ -60,10 +60,10 @@ export default function AboutUsPage() {
         </div>
       </div>
 
-      <div className="bg-gray-50 py-16">
+      <div className="bg-gray-50 py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-gray-800 mb-12">Our Work</h2>
-          <BentoGrid className="max-w-5xl mx-auto">
+          <h2 className="text-4xl font-bold text-gray-800 mb-6">Our Work</h2>
+          <BentoGrid className="max-w-5xl mx-auto gap-4">
             <BentoGridItem
               key="project-alpha"
               className="lg:col-span-2"
@@ -73,8 +73,8 @@ export default function AboutUsPage() {
                 <Image
                   src="/glass-pattern-1.png"
                   alt="Project Alpha"
-                  width={500}
-                  height={300}
+                  width={600}
+                  height={360}
                   className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"
                 />
               }
@@ -87,8 +87,8 @@ export default function AboutUsPage() {
                 <Image
                   src="/glass-pattern-2.png"
                   alt="Project Beta"
-                  width={500}
-                  height={300}
+                  width={600}
+                  height={360}
                   className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"
                 />
               }
@@ -101,8 +101,8 @@ export default function AboutUsPage() {
                 <Image
                   src="/glass-pattern-3.png"
                   alt="Project Gamma"
-                  width={500}
-                  height={300}
+                  width={600}
+                  height={360}
                   className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"
                 />
               }
@@ -116,8 +116,8 @@ export default function AboutUsPage() {
                 <Image
                   src="/glass-pattern-4.png"
                   alt="Project Delta"
-                  width={500}
-                  height={300}
+                  width={600}
+                  height={360}
                   className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"
                 />
               }
@@ -130,8 +130,8 @@ export default function AboutUsPage() {
                 <Image
                   src="/hero-background.png"
                   alt="Project Epsilon"
-                  width={500}
-                  height={300}
+                  width={600}
+                  height={360}
                   className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"
                 />
               }
@@ -144,8 +144,8 @@ export default function AboutUsPage() {
                 <Image
                   src="/aboutbg.png"
                   alt="Project Zeta"
-                  width={500}
-                  height={300}
+                  width={600}
+                  height={360}
                   className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"
                 />
               }
@@ -158,8 +158,8 @@ export default function AboutUsPage() {
                 <Image
                   src="/amber-logo.png"
                   alt="Project Eta"
-                  width={500}
-                  height={300}
+                  width={600}
+                  height={360}
                   className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"
                 />
               }
@@ -167,7 +167,6 @@ export default function AboutUsPage() {
           </BentoGrid>
         </div>
       </div>
-              <StickyScrollRevealDemo/>
       <Footerdemo />
     </>
   )
