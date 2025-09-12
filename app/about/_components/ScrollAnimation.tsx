@@ -1,14 +1,12 @@
-"use client";
-import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
-import React from "react";
-
+"use client"
+import { StickyScroll } from "@/components/ui/sticky-scroll-reveal"
 
 const content = [
   {
     // image:"",
     title: "Who Are We, Really?",
     description:
-      "We’re not just about glass films. We’re about transforming blank spaces into bold statements. Welcome to Amber Glass India — where your glass tells a story.",
+      "We're not just about glass films. We're about transforming blank spaces into bold statements. Welcome to Amber Glass India — where your glass tells a story.",
     content: (
       <div className="flex h-full w-full items-center justify-center text-white">
         <img
@@ -23,8 +21,7 @@ const content = [
   },
   {
     title: "What Do We Do?",
-    description:
-      "Aesthetic films Privacy and safety Heat and glare control Visual branding",
+    description: "Aesthetic films Privacy and safety Heat and glare control Visual branding",
     content: (
       <div className="flex h-full w-full items-center justify-center text-white">
         <img
@@ -40,8 +37,8 @@ const content = [
   {
     title: "Why We Exist?",
     description:
-      "Because space isn’t just space. It’s where stories are told, dreams are lived, and memories are made. And your environment should reflect that beauty — without compromise. ",
-   content: (
+      "Because space isn't just space. It's where stories are told, dreams are lived, and memories are made. And your environment should reflect that beauty — without compromise. ",
+    content: (
       <div className="flex h-full w-full items-center justify-center text-white">
         <img
           src="https://res.cloudinary.com/dsalsyu0z/image/upload/v1757661399/WhatsApp_Image_2025-09-12_at_12.44.49_2_bomznt.jpg"
@@ -69,11 +66,11 @@ const content = [
       </div>
     ),
   },
-];
+]
 export function StickyScrollRevealDemo() {
   return (
-    <div className="w-full py-24 ">
+    <div className="w-full">
       <StickyScroll content={content} />
     </div>
-  );
+  )
 }
