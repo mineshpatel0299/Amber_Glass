@@ -81,8 +81,8 @@ const Flipbook: React.FC<FlipbookProps> = ({ images }) => {
         }`}
       >
         <HTMLFlipBook
-          width={isFullscreen ? 800 : 500}
-          height={isFullscreen ? 1000 : 700}
+          width={isFullscreen ? 800 : 600} // increased normal view width from 500 to 600
+          height={isFullscreen ? 1000 : 840} // increased normal view height from 700 to 840
           size="stretch"
           minWidth={315}
           maxWidth={isFullscreen ? 1200 : 1000}
