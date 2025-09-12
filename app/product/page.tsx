@@ -44,7 +44,7 @@ const ProductPage = () => {
       {/* Flipbook Section */}
       <section className="py-12 md:py-16 lg:py-20 bg-white dark:bg-gray-800">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-10">Interactive Product Catalog</h2>
+          <h2 className="text-4xl font-bold text-center mb-10"> Product Catalog</h2>
           <Flipbook images={images} />
           
         </div>

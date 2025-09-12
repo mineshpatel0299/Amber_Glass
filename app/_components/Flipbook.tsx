@@ -11,9 +11,11 @@ interface FlipbookProps {
 const Flipbook: React.FC<FlipbookProps> = ({ images }) => {
   const book = useRef<any>(null);
   const [isOpen, setIsOpen] = useState(true); // State to control if the flipbook is open
+  const [currentPage, setCurrentPage] = useState(0); // State to track the current page
 
   const onFlip = useCallback((e: any) => {
     console.log('Current page: ' + e.data);
+    setCurrentPage(e.data); // Update current page
     // If the flipbook reaches the last page, consider it "closed"
     if (e.data === images.length - 1) {
       setIsOpen(false);
@@ -83,22 +85,22 @@ const Flipbook: React.FC<FlipbookProps> = ({ images }) => {
               </div>
             ))}
           </HTMLFlipBook>
-          <div className="absolute inset-y-0 left-0 flex items-center">
-            <button
-              onClick={goToPrevPage}
-              className="p-2 bg-gray-800 bg-opacity-50 text-white rounded-r-lg hover:bg-opacity-75 transition-opacity duration-300 disabled:opacity-0 disabled:cursor-not-allowed"
-            >
-              {'<'}
-            </button>
-          </div>
-          <div className="absolute inset-y-0 right-0 flex items-center">
-            <button
-              onClick={goToNextPage}
-              className="p-2 bg-gray-800 bg-opacity-50 text-white rounded-l-lg hover:bg-opacity-75 transition-opacity duration-300 disabled:opacity-0 disabled:cursor-not-allowed"
-            >
-              {'>'}
-            </button>
-          </div>
+          <button
+            onClick={goToPrevPage}
+            disabled={currentPage === 0}
+            className="absolute -left-12 top-1/2 -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 focus:outline-none transition-all duration-300 z-10 disabled:opacity-50 disabled:cursor-not-allowed"
+            aria-label="Previous page"
+          >
+            &#8592;
+          </button>
+          <button
+            onClick={goToNextPage}
+            disabled={currentPage === images.length - 1}
+            className="absolute -right-12 top-1/2 -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 focus:outline-none transition-all duration-300 z-10 disabled:opacity-50 disabled:cursor-not-allowed"
+            aria-label="Next page"
+          >
+            &#8594;
+          </button>
           <p className="mt-4 text-sm text-gray-600 text-center">Click or swipe on the pages to flip!</p>
         </div>
       ) : (
