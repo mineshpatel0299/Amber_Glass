@@ -3,6 +3,7 @@ import { Footerdemo } from "@/components/ui/footer-section"
 import AnimatedCounter from "@/app/_components/animated-counter"
 import { BentoGrid, BentoGridItem } from "@/app/_components/bento-grid"
 import ScrollAnimatedStory from "@/app/_components/ScrollAnimatedStory"
+import { StickyScrollRevealDemo } from "./_components/ScrollAnimation"
 
 export default function AboutUsPage() {
   return (
@@ -166,7 +167,7 @@ export default function AboutUsPage() {
           </BentoGrid>
         </div>
       </div>
-
+              <StickyScrollRevealDemo/>
       <Footerdemo />
     </>
   )
