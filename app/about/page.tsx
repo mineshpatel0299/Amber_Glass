@@ -3,7 +3,7 @@ import Image from "next/image"
 import { Footerdemo } from "@/components/ui/footer-section"
 import AnimatedCounter from "@/app/_components/animated-counter"
 import { BentoGrid, BentoGridItem } from "@/app/_components/bento-grid"
-import { StickyScrollRevealDemo as ScrollAnimatedStory } from "@/app/_components/ScrollAnimatedStory"
+import { StickyScrollRevealMain } from "./_components/ScrollAnimation"
 
 export default function AboutUsPage() {
   return (
@@ -32,7 +32,8 @@ export default function AboutUsPage() {
         </div>
       </div>
 
-      <ScrollAnimatedStory />
+      {/* <ScrollAnimatedStory /> */}
+      <StickyScrollRevealMain/>
 
       <div className="bg-white py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
