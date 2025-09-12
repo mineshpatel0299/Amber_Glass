@@ -23,14 +23,8 @@ const content = [
   },
   {
     title: "What Do We Do?",
-    description: (
-      <ul className="list-disc list-inside">
-        <li>Aesthetic films</li>
-        <li>Privacy and safety</li>
-        <li>Heat and glare control</li>
-        <li>Visual branding</li>
-      </ul>
-    ),
+    description:
+      "Aesthetic films, Privacy and safety, Heat and glare control, Visual branding",
     content: (
       <div className="flex h-full w-full items-center justify-center text-white">
         <img

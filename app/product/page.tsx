@@ -24,6 +24,25 @@ const images = [
   '/flipbook/145.png',
 ];
 
+const images2 = [
+  '/flipbook2/107.png',
+  '/flipbook2/108.png',
+  '/flipbook2/109.png',
+  '/flipbook2/110.png',
+  '/flipbook2/111.png',
+  '/flipbook2/113.png',
+  '/flipbook2/114.png',
+  '/flipbook2/115.png',
+  '/flipbook2/116.png',
+  '/flipbook2/117.png',
+  '/flipbook2/119.png',
+  '/flipbook2/120.png',
+  '/flipbook2/121.png',
+  '/flipbook2/122.png',
+  '/flipbook2/123.png',
+  '/flipbook2/125.png',
+];
+
 const ProductPage = () => {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
@@ -44,9 +63,16 @@ const ProductPage = () => {
       {/* Flipbook Section */}
       <section className="py-12 md:py-16 lg:py-20 bg-white dark:bg-gray-800">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-10"> Product Catalog</h2>
+          <h2 className="text-4xl font-bold text-center mb-10"> Opaque Films</h2>
           <Flipbook images={images} />
-          
+        </div>
+      </section>
+
+      {/* Second Flipbook Section */}
+      <section className="py-12 md:py-16 lg:py-20 bg-gray-100 dark:bg-gray-900">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-10"> Printed Films</h2>
+          <Flipbook images={images2} />
         </div>
       </section>
 

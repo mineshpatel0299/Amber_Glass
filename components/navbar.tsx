@@ -11,6 +11,10 @@ export default function Navbar() {
   const router = useRouter(); // Initialize useRouter
   const pathname = usePathname(); // Initialize usePathname
 
+  console.log("Navbar - Pathname:", pathname);
+  console.log("Navbar - isProductPage:", pathname === "/product");
+  console.log("Navbar - Scrolled:", scrolled);
+
   const handleSmoothScroll = (path: string) => {
     setIsMenuOpen(false); // Close mobile menu if open
     router.push(path);
@@ -28,7 +32,7 @@ export default function Navbar() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [pathname]); // Re-run effect when pathname changes to reset scroll state if needed
 
   return (
     <nav className="fixed top-2 left-2 right-2 sm:top-4 sm:left-4 sm:right-4 z-50 bg-gradient-to-r from-white/25 via-white/20 to-white/25 backdrop-blur-3xl rounded-xl sm:rounded-2xl shadow-2xl border border-white/30 font-inter before:absolute before:inset-0 before:rounded-xl before:sm:rounded-2xl before:bg-gradient-to-b before:from-white/10 before:to-transparent before:pointer-events-none">
@@ -41,7 +45,7 @@ export default function Navbar() {
             >
               <div
                 className={`absolute w-48 inset-0 transition-all duration-700 ease-in-out ${
-                  isProductPage || scrolled
+                  scrolled
                     ? "opacity-0 translate-y-4"
                     : "opacity-100 translate-y-0"
                 }`}
@@ -56,7 +60,7 @@ export default function Navbar() {
               </div>
               <div
                 className={`absolute inset-0 transition-all duration-700 ease-in-out ${
-                  isProductPage || scrolled
+                  scrolled
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 -translate-y-4"
                 }`}
@@ -77,7 +81,7 @@ export default function Navbar() {
               <a
                 onClick={() => handleSmoothScroll("/")}
                 className={`${
-                  isProductPage ? "text-black" : scrolled ? "text-[#567387]" : "text-white"
+                  scrolled ? "text-black" : "text-white"
                 } hover:text-amber-700 px-2 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg hover:backdrop-blur-sm cursor-pointer`}
               >
                 Home
@@ -85,7 +89,7 @@ export default function Navbar() {
               <a
                 onClick={() => handleSmoothScroll("/about")}
                 className={`${
-                  isProductPage ? "text-black" : scrolled ? "text-[#567387]" : "text-white"
+                  scrolled ? "text-black" : "text-white"
                 } hover:text-amber-700 px-2 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg hover:backdrop-blur-sm cursor-pointer`}
               >
                 About Us
@@ -93,7 +97,7 @@ export default function Navbar() {
               <a
                 onClick={() => handleSmoothScroll("/product")}
                 className={`${
-                  isProductPage ? "text-black" : scrolled ? "text-[#567387]" : "text-white"
+                  scrolled ? "text-black" : "text-white"
                 } hover:text-amber-700 px-2 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg hover:backdrop-blur-sm cursor-pointer`}
               >
                 Products
@@ -101,7 +105,7 @@ export default function Navbar() {
               <a
                 href="/partner"
                 className={`${
-                  isProductPage ? "text-black" : scrolled ? "text-[#567387]" : "text-white"
+                  scrolled ? "text-black" : "text-white"
                 } hover:text-amber-700 px-2 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg hover:backdrop-blur-sm`}
               >
                 Partner with Us
@@ -113,10 +117,8 @@ export default function Navbar() {
           <div className="hidden lg:block">
             <Button
               className={`${
-                isProductPage
+                scrolled
                   ? "bg-gradient-to-r from-gray-200/30 to-gray-200/20 hover:from-gray-200/40 hover:to-gray-200/30 text-black hover:text-amber-700 border border-gray-200/40"
-                  : scrolled
-                  ? "bg-gradient-to-r from-white/30 to-white/20 hover:from-white/40 hover:to-white/30 text-[#567387] hover:text-amber-700 border border-white/40"
                   : "bg-white/20 hover:bg-white/30 text-white border border-white/50"
               } px-4 py-2 text-sm font-medium transition-all duration-300 shadow-xl hover:shadow-2xl hover:rounded-lg backdrop-blur-sm hover:scale-105`}
             >
@@ -130,7 +132,7 @@ export default function Navbar() {
               variant="ghost"
               size="sm"
               className={`${
-                isProductPage ? "text-black" : scrolled ? "text-[#567387]" : "text-white"
+                scrolled ? "text-black" : "text-white"
               } hover:text-amber-700 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 p-2 hover:shadow-lg transition-all duration-300`}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
@@ -158,7 +160,7 @@ export default function Navbar() {
               <a
                 onClick={() => handleSmoothScroll("/")}
                 className={`${
-                  isProductPage ? "text-black" : scrolled ? "text-[#567387]" : "text-white"
+                  scrolled ? "text-black" : "text-white"
                 } hover:text-amber-700 px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg cursor-pointer`}
               >
                 Home
@@ -166,7 +168,7 @@ export default function Navbar() {
               <a
                 onClick={() => handleSmoothScroll("/about")}
                 className={`${
-                  isProductPage ? "text-black" : scrolled ? "text-[#567387]" : "text-white"
+                  scrolled ? "text-black" : "text-white"
                 } hover:text-amber-700 px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg cursor-pointer`}
               >
                 About Us
@@ -174,7 +176,7 @@ export default function Navbar() {
               <a
                 onClick={() => handleSmoothScroll("/product")}
                 className={`${
-                  isProductPage ? "text-black" : scrolled ? "text-[#567387]" : "text-white"
+                  scrolled ? "text-black" : "text-white"
                 } hover:text-amber-700 px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg cursor-pointer`}
               >
                 Products
@@ -182,7 +184,7 @@ export default function Navbar() {
               <a
                 href="#partner"
                 className={`${
-                  isProductPage ? "text-black" : scrolled ? "text-[#567387]" : "text-white"
+                  scrolled ? "text-black" : "text-white"
                 } hover:text-amber-700 px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg`}
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -190,10 +192,8 @@ export default function Navbar() {
               </a>
               <Button
                 className={`${
-                  isProductPage
+                  scrolled
                     ? "bg-gradient-to-r from-gray-200/30 to-gray-200/20 hover:from-gray-200/40 hover:to-gray-200/30 text-black"
-                    : scrolled
-                    ? "bg-gradient-to-r from-white/30 to-white/20 hover:from-white/40 hover:to-white/30 text-[#567387]"
                     : "bg-white/20 hover:bg-white/30 text-white border border-white/50"
                 } px-4 py-2 text-sm font-medium transition-all duration-300 shadow-xl hover:shadow-2xl hover:rounded-lg mt-2 w-full backdrop-blur-sm`}
               >
