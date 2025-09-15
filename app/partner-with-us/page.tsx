@@ -1,5 +1,7 @@
 import React from 'react';
 import { TrendingUp, Wrench, Clipboard, Users } from 'lucide-react';
+import PartnerForm from './_components/partner-form';
+import { Footerdemo } from '@/components/ui/footer-section';
 
 const PartnerWithUs = () => {
   return (
@@ -61,7 +63,9 @@ const PartnerWithUs = () => {
             </div>
           </div>
         </div>
+        <PartnerForm />
       </div>
+      <Footerdemo />
     </div>
   );
 };
