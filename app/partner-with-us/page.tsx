@@ -41,21 +41,21 @@ const PartnerWithUs = () => {
           <h2 className="text-4xl font-bold text-black mb-12 text-center">How It Works</h2>
           <div className="flex flex-col md:flex-row justify-center items-center md:space-x-8 space-y-8 md:space-y-0">
             <div className="text-center">
-              <div className="bg-[#D6EAF8] rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+              <div className="bg-[#D6EAF8] rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto">
                 <span className="text-2xl font-bold text-[#003366]">1</span>
               </div>
               <h3 className="text-xl font-bold text-black mb-2">Apply</h3>
               <p className="text-gray-600">Submit your partnership application and tell us about your business</p>
             </div>
             <div className="text-center">
-              <div className="bg-[#D6EAF8] rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+              <div className="bg-[#D6EAF8] rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto">
                 <span className="text-2xl font-bold text-[#003366]">2</span>
               </div>
               <h3 className="text-xl font-bold text-black mb-2">Onboard</h3>
               <p className="text-gray-600">Complete training and get access to our partner resources</p>
             </div>
             <div className="text-center">
-              <div className="bg-[#D6EAF8] rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+              <div className="bg-[#D6EAF8] rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto">
                 <span className="text-2xl font-bold text-[#003366]">3</span>
               </div>
               <h3 className="text-xl font-bold text-black mb-2">Grow</h3>
