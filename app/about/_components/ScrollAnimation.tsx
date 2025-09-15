@@ -56,7 +56,7 @@ const content = [
     description:
       "Homeowners, Gym & Studio Owners, Interior Designers, Wedding Planners, Architects, Photographers …and you.",
     content: (
-      <div className="flex h-full w-full items-center justify-center text-white">
+      <div className="flex h-full w-full items-center justify-center text-white text-center">
         <img
           src="https://res.cloudinary.com/dsalsyu0z/image/upload/v1757661399/WhatsApp_Image_2025-09-12_at_12.44.49_1_fxoq4u.jpg"
           width={300}
@@ -75,5 +75,3 @@ export function StickyScrollRevealMain() {
     </div>
   )
 }
-
-

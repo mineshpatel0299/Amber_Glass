@@ -32,8 +32,16 @@ export default function AboutUsPage() {
         </div>
       </div>
 
-      {/* <ScrollAnimatedStory /> */}
-      <StickyScrollRevealMain/>
+      {/* This div creates the scrollable space for the sticky section */}
+      {/* The height is calculated based on the number of items in StickyScrollRevealMain's content array (4 items * 100vh each) */}
+      <div style={{ height: `400vh` }}>
+        {/* This div makes the StickyScrollRevealMain component stick to the top of the viewport */}
+        {/* `overflow-hidden` ensures that the main page scroll is paused while this section is active, */}
+        {/* allowing the internal scroll of StickyScrollRevealMain to take over. */}
+        <div className="sticky top-0 h-screen overflow-hidden">
+          <StickyScrollRevealMain />
+        </div>
+      </div>
 
       <div className="bg-white py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

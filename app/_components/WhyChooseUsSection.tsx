@@ -24,7 +24,7 @@ const WhyChooseUsSection = () => {
             <FeatureCard
               icon={<FaClock className="text-4xl text-[#567387]" />}
               title = "Unmatched Design Aesthetics"
-              description = "From contemporary elegance to traditional charm, our curated range of decorative glass films transforms every space into a canvas of creativity. Perfect for homes, studios, gyms, offices, and event spaces."
+              description = "From contemporary elegance to traditional charm, our curated range of decorative glass films transforms every space into a canvas of creativity."
             />
             <FeatureCard
               icon={<FaLightbulb className="text-4xl text-[#567387]" />}
