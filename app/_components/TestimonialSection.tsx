@@ -48,24 +48,9 @@ const TestimonialSection = () => {
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold mb-12 text-[#567387] text-center">What People Say</h2>
 
-        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-12">
-          {/* Left Section: About Amber Glass India */}
-          <div className="w-full lg:w-1/3 text-center lg:text-left p-6">
-            <h3 className="text-3xl font-bold mb-4 text-[#567387]">About Amber Glass India</h3>
-            <p className="text-gray-700 mb-6">
-              Amber Glass India is a trusted name in premium glass packaging solutions, delivering quality and
-              innovation for industries across the country.
-            </p>
-            <ul className="text-gray-600 space-y-2">
-              <li>• Specializing in high-quality amber glass bottles and jars</li>
-              <li>• Trusted by pharmaceutical, food, and cosmetic brands</li>
-              <li>• Durable, eco-friendly, and safe packaging materials</li>
-              <li>• Custom designs and bulk supply options available</li>
-            </ul>
-          </div>
-
-          {/* Right Section: Testimonial Carousel */}
-          <div className="w-full lg:w-2/3 relative flex items-center justify-center">
+        <div className="flex flex-col items-center justify-center gap-12">
+          {/* Testimonial Carousel */}
+          <div className="w-full relative flex items-center justify-center">
             {/* Testimonial Cards */}
             <div className="flex overflow-hidden w-full max-w-2xl"> {/* Reduced max-w-4xl to max-w-2xl */}
               {testimonials.map((testimonial, index) => (
