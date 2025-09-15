@@ -43,6 +43,50 @@ const images2 = [
   '/flipbook2/125.png',
 ];
 
+const images3 = [
+  '/flipbook3/79.png',
+  '/flipbook3/80.png',
+  '/flipbook3/81.png',
+  '/flipbook3/82.png',
+  '/flipbook3/83.png',
+  '/flipbook3/84.png',
+  '/flipbook3/85.png',
+  '/flipbook3/86.png',
+  '/flipbook3/87.png',
+  '/flipbook3/88.png',
+  '/flipbook3/89.png',
+  '/flipbook3/90.png',
+  '/flipbook3/91.png',
+  '/flipbook3/92.png',
+  '/flipbook3/93.png',
+  '/flipbook3/94.png',
+  '/flipbook3/95.png',
+  '/flipbook3/96.png',
+  '/flipbook3/97.png',
+];
+
+const images4 = [
+  '/flipbook4/39.png',
+  '/flipbook4/40.png',
+  '/flipbook4/41.png',
+  '/flipbook4/42.png',
+  '/flipbook4/43.png',
+  '/flipbook4/44.png',
+  '/flipbook4/45.png',
+  '/flipbook4/46.png',
+  '/flipbook4/47.png',
+  '/flipbook4/48.png',
+  '/flipbook4/49.png',
+  '/flipbook4/50.png',
+  '/flipbook4/51.png',
+  '/flipbook4/52.png',
+  '/flipbook4/53.png',
+  '/flipbook4/54.png',
+  '/flipbook4/55.png',
+  '/flipbook4/56.png',
+  '/flipbook4/57.png',
+];
+
 const ProductPage = () => {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
@@ -73,6 +117,22 @@ const ProductPage = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-10"> Printed Films</h2>
           <Flipbook images={images2} />
+        </div>
+      </section>
+
+      {/* Third Flipbook Section - Frosted Films */}
+      <section className="py-12 md:py-16 lg:py-20 bg-white dark:bg-gray-800">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-10"> Frosted Films</h2>
+          <Flipbook images={images3} />
+        </div>
+      </section>
+
+      {/* Fourth Flipbook Section - Transparent Films */}
+      <section className="py-12 md:py-16 lg:py-20 bg-gray-100 dark:bg-gray-900">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-10"> Transparent Films</h2>
+          <Flipbook images={images4} />
         </div>
       </section>
 

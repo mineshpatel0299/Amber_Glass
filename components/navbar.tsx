@@ -18,7 +18,6 @@ export default function Navbar() {
   const handleSmoothScroll = (path: string) => {
     setIsMenuOpen(false); // Close mobile menu if open
     router.push(path);
-    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const isProductPage = pathname === "/product";
@@ -36,7 +35,7 @@ export default function Navbar() {
   }, [pathname]); // Re-run effect when pathname changes to reset scroll state if needed
 
   return (
-    <nav className="fixed top-2 left-2 right-2 sm:top-4 sm:left-4 sm:right-4 z-50 bg-gradient-to-r from-white/25 via-white/20 to-white/25 backdrop-blur-3xl rounded-xl sm:rounded-2xl shadow-2xl border border-white/30 font-inter before:absolute before:inset-0 before:rounded-xl before:sm:rounded-2xl before:bg-gradient-to-b before:from-white/10 before:to-transparent before:pointer-events-none">
+    <nav className="fixed top-2 left-2 right-2 sm:top-4 sm:left-4 sm:right-4 z-50 bg-gradient-to-r from-white/25 via-white/20 to-white/25 backdrop-blur-3xl rounded-xl sm:rounded-2xl shadow-2xl border border-white/30 font-inter before:absolute before:inset-0 before:rounded-xl before:sm:rounded-2xl before:bg-gradient-to-b before:from-white/10 before:to-transparent">
       <div className="max-w-8xl mx-auto px-2 md:px-12 relative z-10">
         <div className="flex items-center justify-between h-14 sm:h-16">
           <div className="flex items-center justify-between h-14 sm:h-16">

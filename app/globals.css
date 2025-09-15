@@ -145,3 +145,7 @@
     @apply bg-background text-foreground;
   }
 }
+
+video {
+  filter: brightness(50%); /* Adjust this value to make the video darker or lighter */
+}
