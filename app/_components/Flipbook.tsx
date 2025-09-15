@@ -1,6 +1,6 @@
 "use client"
 
-import type React from "react"
+import React from "react"
 import { useRef, useCallback, useState, useEffect } from "react"
 import HTMLFlipBook from "react-pageflip"
 import Image from "next/image"
@@ -122,7 +122,7 @@ const Flipbook: React.FC<FlipbookProps> = ({ images }) => {
         <button
           onClick={goToPrevPage}
           disabled={currentPage === 0}
-          className={`absolute top-1/2 -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 focus:outline-none transition-all duration-300 z-10 disabled:opacity-50 disabled:cursor-not-allowed ${
+          className={`absolute top-1/2 -translate-y-1/4 bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 focus:outline-none transition-all duration-300 z-10 disabled:opacity-50 disabled:cursor-not-allowed ${
             isFullscreen ? "left-8" : "-left-12"
           }`}
           aria-label="Previous page"
