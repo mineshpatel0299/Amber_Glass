@@ -74,20 +74,20 @@ const Flipbook: React.FC<FlipbookProps> = ({ images }) => {
     <div className="flex flex-col items-center p-4">
       <div
         ref={containerRef}
-        className={`relative shadow-2xl rounded-lg ${
+        className={`relative rounded-lg ${
           isFullscreen
             ? "fixed inset-0 bg-black flex items-center justify-center z-50 w-full h-full"
-            : "w-full max-w-3xl mx-auto"
+            : "w-full max-w-6xl mx-auto"
         }`}
       >
         <HTMLFlipBook
-          width={isFullscreen ? 800 : 600} // increased normal view width from 500 to 600
-          height={isFullscreen ? 1000 : 840} // increased normal view height from 700 to 840
+          width={isFullscreen ? 1200 : 900}
+          height={isFullscreen ? 800 : 600}
           size="stretch"
-          minWidth={315}
-          maxWidth={isFullscreen ? 1200 : 1000}
-          minHeight={400}
-          maxHeight={isFullscreen ? 1600 : 1533}
+          minWidth={400}
+          maxWidth={isFullscreen ? 1600 : 1200}
+          minHeight={300}
+          maxHeight={isFullscreen ? 1000 : 800}
           maxShadowOpacity={0.5}
           showCover={true}
           mobileScrollSupport={true}
@@ -97,7 +97,7 @@ const Flipbook: React.FC<FlipbookProps> = ({ images }) => {
           style={{}}
           startPage={0}
           flippingTime={1000}
-          usePortrait={true}
+          usePortrait={false}
           startZIndex={0}
           autoSize={true}
           showPageCorners={true}
