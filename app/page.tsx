@@ -7,6 +7,7 @@ import { WordRotate } from "@/components/magicui/word-rotate";
 import AboutUsSection from "./_components/AboutUsSection";
 import { HeroParallax } from "@/components/ui/hero-parallax";
 import { HeroParallaxDemo } from "./_components/section-third";
+import WhyChooseUsSection from "./_components/WhyChooseUsSection"; // Import the new component
 import Image from "next/image";
 import Link from "next/link";
 import { Footerdemo } from "@/components/ui/footer-section";
@@ -90,7 +91,7 @@ export default function HomePage() {
         <AboutUsSection />
         <CompareGlasses/>
         <HeroParallaxDemo />
-       
+        <WhyChooseUsSection /> {/* Add the new component here */}
         <Footerdemo />
       </div>
     </>

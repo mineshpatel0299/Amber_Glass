@@ -33,13 +33,13 @@ export default function CompareGlasses() {
         <div className="flex-1 flex flex-col justify-center items-center text-center gap-10 px-6 sm:px-8 md:px-12 py-12">
           
           <div className="flex flex-col items-center gap-2">
-            <h1 className="text-white uppercase text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold tracking-tight leading-tight">
+            <h1 className="text-white uppercase text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-normal tracking-tight leading-tight">
               HOLD AND DRAG
             </h1>
-            <h1 className="text-white uppercase text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold tracking-tight leading-tight">
+            <h1 className="text-white uppercase text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-normal tracking-tight leading-tight">
               TO SEE THE MAGIC
             </h1>
-            <p className="text-white/57 uppercase text-sm sm:text-base md:text-xl lg:text-2xl font-medium tracking-wide mt-2">
+            <p className="text-white/57 uppercase text-sm sm:text-base md:text-xl lg:text-2xl font-normal tracking-wide mt-2">
               INNOVATIVE GLASS FILMS FOR ELEGANT SPACES
             </p>
           </div>

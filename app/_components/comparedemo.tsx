@@ -5,7 +5,7 @@ export function CompareDemo() {
   return (
     <div className="md:w-[100%] lg:w-[80%] h-[60vh]  flex items-center justify-center [perspective:900px] [transform-style:preserve-3d]">
       <div
-        className="p-1 md:p-4 border rounded-3xl dark:bg-neutral-900 bg-neutral-100  border-neutral-200 dark:border-neutral-800 mx-auto w-[90%] h-1/2 md:h-full"
+        className="p-1 md:p-4   dark:bg-neutral-900  mx-auto w-[90%] h-1/2 md:h-full"
       >
         <Compare
           firstImage="https://res.cloudinary.com/dsalsyu0z/image/upload/v1756036477/ChatGPT_Image_Jul_29_2025_at_12_47_48_PM_ihf2yt.png"
