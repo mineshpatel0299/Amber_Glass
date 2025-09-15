@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import localFont from "next/font/local";
 import { WordRotate } from "@/components/magicui/word-rotate";
-import SectionSec from "./_components/sectionsec";
+import AboutUsSection from "./_components/AboutUsSection";
 import { HeroParallax } from "@/components/ui/hero-parallax";
 import { HeroParallaxDemo } from "./_components/section-third";
 import Image from "next/image";
@@ -87,8 +87,8 @@ export default function HomePage() {
       </div>
 
       <div>
-        <SectionSec />
-         <CompareGlasses/>
+        <AboutUsSection />
+        <CompareGlasses/>
         <HeroParallaxDemo />
        
         <Footerdemo />
