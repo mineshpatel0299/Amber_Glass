@@ -20,7 +20,7 @@ export default function HomePage() {
   return (
     <>
       <div className="relative min-h-screen w-full overflow-hidden">
-        <video autoPlay loop muted className="absolute inset-0 object-cover w-full h-full z-0">
+        <video autoPlay loop muted playsInline className="absolute inset-0 object-cover w-full h-full z-0">
           <source src="/amberbg.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
