@@ -51,36 +51,50 @@ export default function Navbar() {
               className="flex-shrink-0t w-32 h-8 sm:w-48 sm:h-12 md:w-72 md:h-12 relative overflow-hidden cursor-pointer"
               onClick={() => handleSmoothScroll("/")}
             >
-              <div
-                className={`absolute w-48 inset-0 transition-all duration-700 ease-in-out ${
-                  mounted && scrolled
-                    ? "opacity-0 translate-y-4"
-                    : "opacity-100 translate-y-0"
-                }`}
-              >
-                <Image
-                  src={isPartnerPage ? "https://res.cloudinary.com/dsalsyu0z/image/upload/v1756049579/final_logo_amber_pngs-02_etiakh.png" : "https://res.cloudinary.com/dsalsyu0z/image/upload/v1756049503/final_logo_amber_pngs-03_epbfqm.png"}
-                  alt="Amber Glass India"
-                  width={220}
-                  height={75}
-                  className={`h-full w-auto object-contain drop-shadow-lg`}
-                />
-              </div>
-              <div
-                className={`absolute inset-0 transition-all duration-700 ease-in-out ${
-                  mounted && scrolled
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 -translate-y-4"
-                }`}
-              >
-                <Image
-                  src="https://res.cloudinary.com/dsalsyu0z/image/upload/v1756049579/final_logo_amber_pngs-02_etiakh.png"
-                  alt="Amber Glass India - Scrolled"
-                  width={220}
-                  height={75}
-                  className={`h-full w-auto object-contain drop-shadow-lg brightness-90 contrast-110`}
-                />
-              </div>
+              {isProductPage ? (
+                <div className="absolute w-48 inset-0 opacity-100 translate-y-0">
+                  <Image
+                    src="https://res.cloudinary.com/dsalsyu0z/image/upload/v1756049579/final_logo_amber_pngs-02_etiakh.png"
+                    alt="Amber Glass India"
+                    width={220}
+                    height={75}
+                    className="h-full w-auto object-contain drop-shadow-lg"
+                  />
+                </div>
+              ) : (
+                <>
+                  <div
+                    className={`absolute w-48 inset-0 transition-all duration-700 ease-in-out ${
+                      mounted && scrolled
+                        ? "opacity-0 translate-y-4"
+                        : "opacity-100 translate-y-0"
+                    }`}
+                  >
+                    <Image
+                      src={isPartnerPage ? "https://res.cloudinary.com/dsalsyu0z/image/upload/v1756049579/final_logo_amber_pngs-02_etiakh.png" : "https://res.cloudinary.com/dsalsyu0z/image/upload/v1756049503/final_logo_amber_pngs-03_epbfqm.png"}
+                      alt="Amber Glass India"
+                      width={220}
+                      height={75}
+                      className={`h-full w-auto object-contain drop-shadow-lg`}
+                    />
+                  </div>
+                  <div
+                    className={`absolute inset-0 transition-all duration-700 ease-in-out ${
+                      mounted && scrolled
+                        ? "opacity-100 translate-y-0"
+                        : "opacity-0 -translate-y-4"
+                    }`}
+                  >
+                    <Image
+                      src="https://res.cloudinary.com/dsalsyu0z/image/upload/v1756049579/final_logo_amber_pngs-02_etiakh.png"
+                      alt="Amber Glass India - Scrolled"
+                      width={220}
+                      height={75}
+                      className={`h-full w-auto object-contain drop-shadow-lg brightness-90 contrast-110`}
+                    />
+                  </div>
+                </>
+              )}
             </div>
           </div>
           {/* Navigation Links - Desktop */}
@@ -88,33 +102,25 @@ export default function Navbar() {
             <div className="ml-10 flex items-baseline space-x-6 xl:space-x-8">
               <a
                 onClick={() => handleSmoothScroll("/")}
-                className={`${
-                  (mounted && scrolled) || isPartnerPage ? "text-black" : "text-white"
-                } hover:text-amber-700 px-2 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg hover:backdrop-blur-sm cursor-pointer`}
+                className={`text-black hover:text-amber-700 px-2 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-gray-200/20 hover:to-gray-200/10 hover:rounded-md hover:shadow-lg hover:backdrop-blur-sm cursor-pointer`}
               >
                 Home
               </a>
               <a
                 onClick={() => handleSmoothScroll("/about")}
-                className={`${
-                  (mounted && scrolled) || isPartnerPage ? "text-black" : "text-white"
-                } hover:text-amber-700 px-2 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg hover:backdrop-blur-sm cursor-pointer`}
+                className={`text-black hover:text-amber-700 px-2 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-gray-200/20 hover:to-gray-200/10 hover:rounded-md hover:shadow-lg hover:backdrop-blur-sm cursor-pointer`}
               >
                 About Us
               </a>
               <a
                 onClick={() => handleSmoothScroll("/product")}
-                className={`${
-                  (mounted && scrolled) || isPartnerPage ? "text-black" : "text-white"
-                } hover:text-amber-700 px-2 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg hover:backdrop-blur-sm cursor-pointer`}
+                className={`text-black hover:text-amber-700 px-2 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-gray-200/20 hover:to-gray-200/10 hover:rounded-md hover:shadow-lg hover:backdrop-blur-sm cursor-pointer`}
               >
                 Products
               </a>
               <a
                 onClick={() => handleSmoothScroll("/partner-with-us")}
-                className={`${
-                  (mounted && scrolled) || isPartnerPage ? "text-black" : "text-white"
-                } hover:text-amber-700 px-2 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg hover:backdrop-blur-sm cursor-pointer`}
+                className={`text-black hover:text-amber-700 px-2 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-gray-200/20 hover:to-gray-200/10 hover:rounded-md hover:shadow-lg hover:backdrop-blur-sm cursor-pointer`}
               >
                 Partner with Us
               </a>
@@ -124,11 +130,7 @@ export default function Navbar() {
           {/* Contact Button - Desktop */}
           <div className="hidden lg:block">
             <Button
-              className={`${
-                (mounted && scrolled) || isPartnerPage
-                  ? "bg-gradient-to-r from-gray-200/30 to-gray-200/20 hover:from-gray-200/40 hover:to-gray-200/30 text-black hover:text-amber-700 border border-gray-200/40"
-                  : "bg-white/20 hover:bg-white/30 text-white border border-white/50"
-              } px-4 py-2 text-sm font-medium transition-all duration-300 shadow-xl hover:shadow-2xl hover:rounded-lg backdrop-blur-sm hover:scale-105`}
+              className={`bg-gradient-to-r from-gray-200/30 to-gray-200/20 hover:from-gray-200/40 hover:to-gray-200/30 text-black hover:text-amber-700 border border-gray-200/40 px-4 py-2 text-sm font-medium transition-all duration-300 shadow-xl hover:shadow-2xl hover:rounded-lg backdrop-blur-sm hover:scale-105`}
             >
               Contact
             </Button>
@@ -139,9 +141,7 @@ export default function Navbar() {
             <Button
               variant="ghost"
               size="sm"
-              className={`${
-                (mounted && scrolled) ? "text-black" : "text-white"
-              } hover:text-amber-700 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 p-2 hover:shadow-lg transition-all duration-300`}
+              className={`text-black hover:text-amber-700 hover:bg-gradient-to-r hover:from-gray-200/20 hover:to-gray-200/10 p-2 hover:shadow-lg transition-all duration-300`}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <svg
@@ -167,42 +167,30 @@ export default function Navbar() {
             <div className="flex flex-col space-y-3">
               <a
                 onClick={() => handleSmoothScroll("/")}
-                className={`${
-                  (mounted && scrolled) ? "text-black" : "text-white"
-                } hover:text-amber-700 px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg cursor-pointer`}
+                className={`text-black hover:text-amber-700 px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-gray-200/20 hover:to-gray-200/10 hover:rounded-md hover:shadow-lg cursor-pointer`}
               >
                 Home
               </a>
               <a
                 onClick={() => handleSmoothScroll("/about")}
-                className={`${
-                  (mounted && scrolled) ? "text-black" : "text-white"
-                } hover:text-amber-700 px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg cursor-pointer`}
+                className={`text-black hover:text-amber-700 px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-gray-200/20 hover:to-gray-200/10 hover:rounded-md hover:shadow-lg cursor-pointer`}
               >
                 About Us
               </a>
               <a
                 onClick={() => handleSmoothScroll("/product")}
-                className={`${
-                  (mounted && scrolled) ? "text-black" : "text-white"
-                } hover:text-amber-700 px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg cursor-pointer`}
+                className={`text-black hover:text-amber-700 px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-gray-200/20 hover:to-gray-200/10 hover:rounded-md hover:shadow-lg cursor-pointer`}
               >
                 Products
               </a>
               <a
                 onClick={() => handleSmoothScroll("/partner-with-us")}
-                className={`${
-                  (mounted && scrolled) ? "text-black" : "text-white"
-                } hover:text-amber-700 px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:rounded-md hover:shadow-lg cursor-pointer`}
+                className={`text-black hover:text-amber-700 px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-gray-200/20 hover:to-gray-200/10 hover:rounded-md hover:shadow-lg cursor-pointer`}
               >
                 Partner with Us
               </a>
               <Button
-                className={`${
-                  (mounted && scrolled)
-                    ? "bg-gradient-to-r from-gray-200/30 to-gray-200/20 hover:from-gray-200/40 hover:to-gray-200/30 text-black"
-                    : "bg-white/20 hover:bg-white/30 text-white border border-white/50"
-                } px-4 py-2 text-sm font-medium transition-all duration-300 shadow-xl hover:shadow-2xl hover:rounded-lg mt-2 w-full backdrop-blur-sm`}
+                className={`bg-gradient-to-r from-gray-200/30 to-gray-200/20 hover:from-gray-200/40 hover:to-gray-200/30 text-black px-4 py-2 text-sm font-medium transition-all duration-300 shadow-xl hover:shadow-2xl hover:rounded-lg mt-2 w-full backdrop-blur-sm`}
               >
                 Contact
               </Button>

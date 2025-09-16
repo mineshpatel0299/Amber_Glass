@@ -26,13 +26,13 @@ export const StickyScroll = ({
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     const cardsBreakpoints = content.map((_, index) => {
-      // Create more evenly distributed breakpoints
-      if (index === 0) return 0.1 // First section starts early
-      if (index === cardLength - 1) return 0.9 // Last section ends later
-      return (index + 0.3) / cardLength // Middle sections
+      
+      if (index === 0) return 0.1 
+      if (index === cardLength - 1) return 0.9 
+      return (index + 0.3) / cardLength 
     })
 
-    // Find the closest breakpoint
+    
     let closestBreakpointIndex = 0
     let minDistance = Math.abs(latest - cardsBreakpoints[0])
 
@@ -44,7 +44,7 @@ export const StickyScroll = ({
       }
     })
 
-    // Ensure we show the last section when scroll is near the end
+    
     if (latest > 0.85) {
       closestBreakpointIndex = cardLength - 1
     }
@@ -64,7 +64,7 @@ export const StickyScroll = ({
       }}
     >
       <div className="h-[20vh]" />
-      {/* Left Side Content */}
+      
       <div className="relative flex w-full items-start px-4">
         <div className="w-full">
           
@@ -92,7 +92,7 @@ export const StickyScroll = ({
         </div>
       </div>
 
-      {/* Right Side Sticky Content */}
+      
       <div
         className={cn(
           "sticky top-1/2 -translate-y-1/2 hidden h-[60vh] w-full rounded-3xl aspect-auto overflow-hidden lg:block",
