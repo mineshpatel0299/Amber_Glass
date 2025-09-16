@@ -21,7 +21,7 @@ const AboutUsSection = () => {
           </div>
 
           {/* Content Section */}
-          <div className="w-full lg:w-1/2 flex flex-col items-start justify-center p-6 lg:p-12 bg-white rounded-lg shadow-lg -ml-16 z-10">
+          <div className="w-full lg:w-1/2 flex flex-col items-center text-center lg:items-start lg:text-left justify-center p-6 lg:p-12 bg-white rounded-lg shadow-lg lg:-ml-16 z-10">
             <p className="text-sm font-semibold text-gray-600 mb-2">WELCOME TO AMBER</p>
             <h2 className={`text-4xl md:text-5xl font-bold text-[#567387] mb-6 ${helvetica.className}`}>
               INNOVATIVE IDEAS <br /> STYLISH DESIGNS

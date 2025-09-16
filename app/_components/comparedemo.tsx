@@ -3,7 +3,7 @@ import { Compare } from "@/components/ui/compare";
 
 export function CompareDemo() {
   return (
-    <div className="md:w-[100%] lg:w-[80%] h-[80vh]  flex items-center justify-center [perspective:900px] [transform-style:preserve-3d]">
+    <div className="w-full lg:w-[80%] h-[50vh] md:h-[80vh] flex items-center justify-center [perspective:900px] [transform-style:preserve-3d]">
       <div
         className="p-1 md:p-4   dark:bg-neutral-900  mx-auto w-full h-full"
       >
@@ -13,7 +13,7 @@ export function CompareDemo() {
           firstImageClassName="object-cover object-left-top w-full"
           secondImageClassname="object-cover object-left-top w-full"
           className="w-full h-full rounded-[22px] md:rounded-lg"
-          slideMode="hover"
+          slideMode="drag"
           autoplay={true}
         />
       </div>
