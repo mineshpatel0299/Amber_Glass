@@ -102,25 +102,25 @@ export default function Navbar() {
             <div className="ml-10 flex items-baseline space-x-6 xl:space-x-8">
               <a
                 onClick={() => handleSmoothScroll("/")}
-                className={`text-black hover:text-amber-700 px-2 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-gray-200/20 hover:to-gray-200/10 hover:rounded-md hover:shadow-lg hover:backdrop-blur-sm cursor-pointer`}
+                className={`text-black hover:text-[var(--color-amber-blue)] px-2 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-gray-200/20 hover:to-gray-200/10 hover:rounded-md hover:shadow-lg hover:backdrop-blur-sm cursor-pointer`}
               >
                 Home
               </a>
               <a
                 onClick={() => handleSmoothScroll("/about")}
-                className={`text-black hover:text-amber-700 px-2 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-gray-200/20 hover:to-gray-200/10 hover:rounded-md hover:shadow-lg hover:backdrop-blur-sm cursor-pointer`}
+                className={`text-black hover:text-[var(--color-amber-blue)] px-2 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-gray-200/20 hover:to-gray-200/10 hover:rounded-md hover:shadow-lg hover:backdrop-blur-sm cursor-pointer`}
               >
                 About Us
               </a>
               <a
                 onClick={() => handleSmoothScroll("/product")}
-                className={`text-black hover:text-amber-700 px-2 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-gray-200/20 hover:to-gray-200/10 hover:rounded-md hover:shadow-lg hover:backdrop-blur-sm cursor-pointer`}
+                className={`text-black hover:text-[var(--color-amber-blue)] px-2 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-gray-200/20 hover:to-gray-200/10 hover:rounded-md hover:shadow-lg hover:backdrop-blur-sm cursor-pointer`}
               >
                 Products
               </a>
               <a
                 onClick={() => handleSmoothScroll("/partner-with-us")}
-                className={`text-black hover:text-amber-700 px-2 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-gray-200/20 hover:to-gray-200/10 hover:rounded-md hover:shadow-lg hover:backdrop-blur-sm cursor-pointer`}
+                className={`text-black hover:text-[var(--color-amber-blue)] px-2 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-gray-200/20 hover:to-gray-200/10 hover:rounded-md hover:shadow-lg hover:backdrop-blur-sm cursor-pointer`}
               >
                 Partner with Us
               </a>
@@ -130,7 +130,7 @@ export default function Navbar() {
           {/* Contact Button - Desktop */}
           <div className="hidden lg:block">
             <Button
-              className={`bg-gradient-to-r from-gray-200/30 to-gray-200/20 hover:from-gray-200/40 hover:to-gray-200/30 text-black hover:text-amber-700 border border-gray-200/40 px-4 py-2 text-sm font-medium transition-all duration-300 shadow-xl hover:shadow-2xl hover:rounded-lg backdrop-blur-sm hover:scale-105`}
+              className={`bg-gradient-to-r from-gray-200/30 to-gray-200/20 hover:from-gray-200/40 hover:to-gray-200/30 text-black hover:text-[var(--color-amber-blue)] border border-gray-200/40 px-4 py-2 text-sm font-medium transition-all duration-300 shadow-xl hover:shadow-2xl hover:rounded-lg backdrop-blur-sm hover:scale-105`}
             >
               Contact
             </Button>
@@ -141,7 +141,7 @@ export default function Navbar() {
             <Button
               variant="ghost"
               size="sm"
-              className={`text-black hover:text-amber-700 hover:bg-gradient-to-r hover:from-gray-200/20 hover:to-gray-200/10 p-2 hover:shadow-lg transition-all duration-300`}
+              className={`text-black hover:text-[var(--color-amber-blue)] hover:bg-gradient-to-r hover:from-gray-200/20 hover:to-gray-200/10 p-2 hover:shadow-lg transition-all duration-300`}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <svg
@@ -167,29 +167,29 @@ export default function Navbar() {
             <div className="flex flex-col space-y-3">
               <a
                 onClick={() => handleSmoothScroll("/")}
-                className={`text-black hover:text-amber-700 px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-gray-200/20 hover:to-gray-200/10 hover:rounded-md hover:shadow-lg cursor-pointer`}
+                className={`text-black hover:text-[var(--color-amber-blue)] px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-gray-200/20 hover:to-gray-200/10 hover:rounded-md hover:shadow-lg cursor-pointer`}
               >
                 Home
               </a>
               <a
                 onClick={() => handleSmoothScroll("/about")}
-                className={`text-black hover:text-amber-700 px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-gray-200/20 hover:to-gray-200/10 hover:rounded-md hover:shadow-lg cursor-pointer`}
+                className={`text-black hover:text-[var(--color-amber-blue)] px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-gray-200/20 hover:to-gray-200/10 hover:rounded-md hover:shadow-lg cursor-pointer`}
               >
                 About Us
               </a>
               <a
                 onClick={() => handleSmoothScroll("/product")}
-                className={`text-black hover:text-amber-700 px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-gray-200/20 hover:to-gray-200/10 hover:rounded-md hover:shadow-lg cursor-pointer`}
+                className={`text-black hover:text-[var(--color-amber-blue)] px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-gray-200/20 hover:to-gray-200/10 hover:rounded-md hover:shadow-lg cursor-pointer`}
               >
                 Products
               </a>
               <a
                 onClick={() => handleSmoothScroll("/partner-with-us")}
-                className={`text-black hover:text-amber-700 px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-gray-200/20 hover:to-gray-200/10 hover:rounded-md hover:shadow-lg cursor-pointer`}
+                className={`text-black hover:text-[var(--color-amber-blue)] px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-gradient-to-r hover:from-gray-200/20 hover:to-gray-200/10 hover:rounded-md hover:shadow-lg cursor-pointer`}
               >
                 Partner with Us
-              </a>
-              <Button
+              </a
+              ><Button
                 className={`bg-gradient-to-r from-gray-200/30 to-gray-200/20 hover:from-gray-200/40 hover:to-gray-200/30 text-black px-4 py-2 text-sm font-medium transition-all duration-300 shadow-xl hover:shadow-2xl hover:rounded-lg mt-2 w-full backdrop-blur-sm`}
               >
                 Contact
