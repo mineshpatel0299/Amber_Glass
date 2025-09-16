@@ -19,9 +19,9 @@ export default function AboutUsPage() {
           className="absolute inset-0 z-0"
         />
         <div className="absolute inset-0 bg-black/50 z-5"></div>
-        <div className="relative z-10 text-white text-left p-6 rounded-lg max-w-2xl ml-6">
-          <h1 className="text-5xl font-bold mb-2 drop-shadow-lg">About Amber Glass</h1>
-          <p className="text-lg mb-2 drop-shadow-md">
+        <div className="relative z-10 text-white text-center p-6 rounded-lg max-w-full mx-auto sm:text-left sm:max-w-2xl sm:ml-6">
+          <h1 className="text-4xl sm:text-5xl font-bold mb-2 drop-shadow-lg">About Amber Glass</h1>
+          <p className="text-base sm:text-lg mb-2 drop-shadow-md">
             Founded with a vision to transform the industry, Amber has been at the forefront of innovation for over a
             decade. Our commitment to excellence and customer satisfaction has made us a trusted partner for businesses
             worldwide.
