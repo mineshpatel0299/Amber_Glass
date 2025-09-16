@@ -150,6 +150,7 @@ export const Compare = ({
       style={{
         position: "relative",
         cursor: slideMode === "drag" ? "grab" : "col-resize",
+        touchAction: "none",
       }}
       onMouseMove={handleMouseMove}
       onMouseLeave={mouseLeaveHandler}
