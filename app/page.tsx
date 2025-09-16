@@ -39,9 +39,10 @@ export default function HomePage() {
                     <span className="block animate-fade-in-up capitalize animate-delay-1">Amber Glass India</span>
                     <span className="inline-flex capitalize items-center animate-fade-in-up animate-delay-1">
                       Where glass meets{" "}
+                      <br className="sm:hidden" />
                       <WordRotate
                         words={["Privacy", "Safety", "Design", "Innovation"]}
-                        className="ml-4"
+                        className="ml-0 sm:ml-4"
                       />
                     </span>
                   </h1>
