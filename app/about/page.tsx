@@ -33,13 +33,13 @@ export default function AboutUsPage() {
         </div>
       </div>
 
-      {/* This div creates the scrollable space for the sticky section */}
+      {/* This div creates the scrollable space for the sticky section on larger screens */}
       {/* The height is calculated based on the number of items in StickyScrollRevealMain's content array (4 items * 100vh each) */}
-      <div style={{ height: `400vh` }}>
-        {/* This div makes the StickyScrollRevealMain component stick to the top of the viewport */}
+      <div className="lg:h-[400vh]"> {/* Apply height conditionally */}
+        {/* This div makes the StickyScrollRevealMain component stick to the top of the viewport on larger screens */}
         {/* `overflow-hidden` ensures that the main page scroll is paused while this section is active, */}
         {/* allowing the internal scroll of StickyScrollRevealMain to take over. */}
-        <div className="sticky top-0 h-screen overflow-hidden">
+        <div className="lg:sticky lg:top-0 lg:h-screen lg:overflow-hidden"> {/* Apply sticky behavior conditionally */}
           <StickyScrollRevealMain />
         </div>
       </div>
