@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaClock, FaLightbulb, FaClipboardList, FaPencilRuler } from 'react-icons/fa'; // Using react-icons for the icons
-import TestimonialSection from './TestimonialSection';
+
 
 const WhyChooseUsSection = () => {
   return (
@@ -45,7 +45,7 @@ const WhyChooseUsSection = () => {
         </div>
 
         {/* Testimonial Section */}
-        <TestimonialSection />
+        
 
         {/* Company Logos Section */}
         {/* <div className="mt-16 flex flex-wrap justify-center items-center gap-8 md:gap-16"> */}

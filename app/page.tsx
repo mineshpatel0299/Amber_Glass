@@ -4,9 +4,9 @@ import localFont from "next/font/local"
 import { WordRotate } from "@/components/magicui/word-rotate"
 import AboutUsSection from "./_components/AboutUsSection"
 import { HeroParallaxDemo } from "./_components/section-third"
-import WhyChooseUsSection from "./_components/WhyChooseUsSection" // Import the new component
 import { Footerdemo } from "@/components/ui/footer-section"
 import CompareGlasses from "./_components/CompareGlasses"
+import TestimonialSection from "./_components/TestimonialSection"
 const helvetica = localFont({
   src: "../public/helvetica-255/helvetica-light-587ebe5a59211.ttf",
 })
@@ -69,7 +69,7 @@ export default function HomePage() {
         <AboutUsSection />
         <CompareGlasses />
         <HeroParallaxDemo />
-        {/* <WhyChooseUsSection /> Add the new component here */}
+       <TestimonialSection />
         <Footerdemo />
       </div>
     </>

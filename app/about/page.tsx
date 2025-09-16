@@ -4,6 +4,7 @@ import { Footerdemo } from "@/components/ui/footer-section"
 import AnimatedCounter from "@/app/_components/animated-counter"
 import { BentoGrid, BentoGridItem } from "@/app/_components/bento-grid"
 import { StickyScrollRevealMain } from "./_components/ScrollAnimation"
+import WhyChooseUsSection from "@/app/_components/WhyChooseUsSection"
 
 export default function AboutUsPage() {
   return (
@@ -44,29 +45,7 @@ export default function AboutUsPage() {
       </div>
 
       <div className="bg-white py-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">WHO WE WORK WITH</h2>
-          <p className="text-lg text-gray-600 mb-6">
-            Interior Designers | Architects | Photo Studios | Event Planners | Gym & Fitness Studios
-            <br />
-            Educational Institutions | Luxury Homeowners | Corporate Offices | Retail Spaces
-          </p>
-
-          <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-gray-50 p-8 rounded-lg shadow-md">
-              <AnimatedCounter target={500} suffix="+" className="text-5xl font-bold text-[#567387] mb-2" />
-              <p className="text-lg text-gray-700">Happy Clients</p>
-            </div>
-            <div className="bg-gray-50 p-8 rounded-lg shadow-md">
-              <AnimatedCounter target={1000} suffix="+" className="text-5xl font-bold text-[#567387] mb-2" />
-              <p className="text-lg text-gray-700">Projects Completed</p>
-            </div>
-            <div className="bg-gray-50 p-8 rounded-lg shadow-md">
-              <AnimatedCounter target={10} suffix="+" className="text-5xl font-bold text-[#567387] mb-2" />
-              <p className="text-lg text-gray-700">Years Experience</p>
-            </div>
-          </div>
-        </div>
+        <WhyChooseUsSection />
       </div>
 
       <div className="bg-gray-50 py-10">
@@ -175,6 +154,7 @@ export default function AboutUsPage() {
             />
           </BentoGrid>
         </div>
+       
       </div>
       <Footerdemo />
     </>
