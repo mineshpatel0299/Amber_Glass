@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import AosInit from "./aos";
 import { Footerdemo } from "@/components/ui/footer-section";
+import WhatsAppIcon from "@/components/ui/whatsapp-icon";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -38,6 +39,7 @@ export default function RootLayout({
         <AosInit />
         <Navbar />
         {children}
+        <WhatsAppIcon />
       </body>
     </html>
   );

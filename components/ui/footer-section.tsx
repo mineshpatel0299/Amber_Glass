@@ -15,12 +15,12 @@ function Footerdemo() {
   
 
   return (
-    <footer className="relative border-t bg-[#567387]  transition-colors duration-300 text-white">
-      <div className="container mx-auto px-4 py-12 md:px-6 lg:px-8">
+    <footer className="relative border-t bg-gradient-to-r from-[#567387] to-[#4a6572] text-white shadow-lg">
+      <div className="container mx-auto px-4 py-16 md:px-6 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="relative">
             <h2 className="mb-4 text-3xl font-bold tracking-tight">Stay Connected</h2>
-            <p className="mb-6 text-muted-foreground">
+            <p className="mb-6 text-gray-300">
               Join our newsletter for the latest updates and exclusive offers.
             </p>
             <form className="relative">
@@ -43,30 +43,32 @@ function Footerdemo() {
           <div>
             <h3 className="mb-4 text-lg font-semibold">Quick Links</h3>
             <nav className="space-y-2 text-sm">
-              <a href="#" className="block transition-colors hover:text-primary">
+              <a href="#" className="block text-gray-300 transition-colors hover:text-white">
                 Home
               </a>
-              <a href="#" className="block transition-colors hover:text-primary">
+              <a href="/about" className="block text-gray-300 transition-colors hover:text-white">
                 About Us
               </a>
-              <a href="#" className="block transition-colors hover:text-primary">
+              {/* <a href="#" className="block text-gray-300 transition-colors hover:text-white">
                 Services
-              </a>
-              <a href="#" className="block transition-colors hover:text-primary">
+              </a> */}
+              <a href="/product" className="block text-gray-300 transition-colors hover:text-white">
                 Products
               </a>
-              <a href="#" className="block transition-colors hover:text-primary">
+              {/* <a href="#" className="block text-gray-300 transition-colors hover:text-white">
                 Contact
-              </a>
+              </a> */}
             </nav>
           </div>
           <div>
             <h3 className="mb-4 text-lg font-semibold">Contact Us</h3>
-            <address className="space-y-2 text-sm not-italic">
-              <p>123 Innovation Street</p>
-              <p>Tech City, TC 12345</p>
-              <p>Phone: (123) 456-7890</p>
-              <p>Email: hello@example.com</p>
+            <address className="space-y-2 text-sm not-italic text-gray-300">
+              <p className="font-bold text-white">Head Office</p>
+              <p>7266 OLD ROHTAK ROAD, AZAD MARKET. Delhi 110006</p>
+              <p className="font-bold mt-2 text-white">Branch Office</p>
+              <p>A-16 HAUZ KHAS, DELHI. 110016</p>
+              <p className="mt-2">Phone: +919540681234</p>
+              <p>Email: info@amberglassindia.com</p>
             </address>
           </div>
           <div className="relative">
@@ -88,10 +90,7 @@ function Footerdemo() {
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Button variant="outline" size="icon" className="rounded-full">
-                      <Twitter className="h-4 w-4" />
-                      <span className="sr-only">Twitter</span>
-                    </Button>
+                    
                   </TooltipTrigger>
                   <TooltipContent>
                     <p>Follow us on Twitter</p>
@@ -101,10 +100,12 @@ function Footerdemo() {
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Button variant="outline" size="icon" className="rounded-full">
-                      <Instagram className="h-4 w-4" />
-                      <span className="sr-only">Instagram</span>
-                    </Button>
+                    <a href="https://www.instagram.com/amberglassindia?igsh=MTAwZ2diNG11b2pjdg==" target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" size="icon" className="rounded-full">
+                        <Instagram className="h-4 w-4" />
+                        <span className="sr-only">Instagram</span>
+                      </Button>
+                    </a>
                   </TooltipTrigger>
                   <TooltipContent>
                     <p>Follow us on Instagram</p>
@@ -114,10 +115,7 @@ function Footerdemo() {
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Button variant="outline" size="icon" className="rounded-full">
-                      <Linkedin className="h-4 w-4" />
-                      <span className="sr-only">LinkedIn</span>
-                    </Button>
+                   
                   </TooltipTrigger>
                   <TooltipContent>
                     <p>Connect with us on LinkedIn</p>
@@ -129,18 +127,18 @@ function Footerdemo() {
               
           </div>
         </div>
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t pt-8 text-center md:flex-row">
-          <p className="text-sm text-muted-foreground">
-            © 2024 Your Company. All rights reserved.
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-gray-700 pt-8 text-center md:flex-row">
+          <p className="text-sm text-gray-400">
+            © 2024 Amber Glass. All rights reserved.
           </p>
           <nav className="flex gap-4 text-sm">
-            <a href="#" className="transition-colors hover:text-primary">
+            <a href="#" className="text-gray-400 transition-colors hover:text-white">
               Privacy Policy
             </a>
-            <a href="#" className="transition-colors hover:text-primary">
+            <a href="#" className="text-gray-400 transition-colors hover:text-white">
               Terms of Service
             </a>
-            <a href="#" className="transition-colors hover:text-primary">
+            <a href="#" className="text-gray-400 transition-colors hover:text-white">
               Cookie Settings
             </a>
           </nav>
