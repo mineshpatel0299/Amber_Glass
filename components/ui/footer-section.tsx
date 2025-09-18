@@ -77,10 +77,12 @@ function Footerdemo() {
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Button variant="outline" size="icon" className="rounded-full">
-                      <Facebook className="h-4 w-4" />
-                      <span className="sr-only">Facebook</span>
-                    </Button>
+                    <a href="https://www.facebook.com/AmberGlassIndia/" target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" size="icon" className="rounded-full">
+                        <Facebook className="h-4 w-4" />
+                        <span className="sr-only">Facebook</span>
+                      </Button>
+                    </a>
                   </TooltipTrigger>
                   <TooltipContent>
                     <p>Follow us on Facebook</p>
@@ -90,7 +92,12 @@ function Footerdemo() {
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    
+                    {/* <a href="#" target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" size="icon" className="rounded-full">
+                        <Twitter className="h-4 w-4" />
+                        <span className="sr-only">Twitter</span>
+                      </Button>
+                    </a> */}
                   </TooltipTrigger>
                   <TooltipContent>
                     <p>Follow us on Twitter</p>
@@ -115,7 +122,12 @@ function Footerdemo() {
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                   
+                    {/* <a href="#" target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" size="icon" className="rounded-full">
+                        <Linkedin className="h-4 w-4" />
+                        <span className="sr-only">LinkedIn</span>
+                      </Button>
+                    </a> */}
                   </TooltipTrigger>
                   <TooltipContent>
                     <p>Connect with us on LinkedIn</p>
@@ -123,8 +135,6 @@ function Footerdemo() {
                 </Tooltip>
               </TooltipProvider>
             </div>
-            
-              
           </div>
         </div>
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-gray-700 pt-8 text-center md:flex-row">
