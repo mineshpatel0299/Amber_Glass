@@ -51,15 +51,15 @@ export default function AboutUsPage() {
       <div className="bg-gray-50 py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-gray-800 mb-6">Our Work</h2>
-          <BentoGrid className="max-w-5xl mx-auto gap-4">
+          <BentoGrid className="max-w-6xl mx-auto gap-4">
             <BentoGridItem
               key="project-alpha"
               className="lg:col-span-2"
-              title="Project Alpha"
-              description="A groundbreaking project in eyewear design."
+              title="Residential Projects"
+              description="Transforming homes with elegant and functional glass solutions."
               header={
                 <Image
-                  src="/glass-pattern-1.png"
+                  src="/bento1.jpeg"
                   alt="Project Alpha"
                   width={600}
                   height={360}
@@ -69,11 +69,11 @@ export default function AboutUsPage() {
             />
             <BentoGridItem
               key="project-beta"
-              title="Project Beta"
-              description="Innovative solutions for enhanced vision."
+              title="Commercial Spaces"
+              description="Modern glass installations for offices, retail, and hospitality."
               header={
                 <Image
-                  src="/glass-pattern-2.png"
+                  src="/bento2.jpeg"
                   alt="Project Beta"
                   width={600}
                   height={360}
@@ -83,11 +83,11 @@ export default function AboutUsPage() {
             />
             <BentoGridItem
               key="project-gamma"
-              title="Project Gamma"
-              description="Redefining comfort and style in eyewear."
+              title="Custom Glass Designs"
+              description="Bespoke glass creations tailored to unique architectural visions."
               header={
                 <Image
-                  src="/glass-pattern-3.png"
+                  src="/office.png"
                   alt="Project Gamma"
                   width={600}
                   height={360}
@@ -98,11 +98,11 @@ export default function AboutUsPage() {
             <BentoGridItem
               key="project-delta"
               className="lg:col-span-2"
-              title="Project Delta"
-              description="Advanced materials for durable and lightweight frames."
+              title="Safety & Security Glass"
+              description="Robust glass solutions for enhanced protection and peace of mind."
               header={
                 <Image
-                  src="/glass-pattern-4.png"
+                  src="/bento3.jpeg"
                   alt="Project Delta"
                   width={600}
                   height={360}
@@ -112,11 +112,11 @@ export default function AboutUsPage() {
             />
             <BentoGridItem
               key="project-epsilon"
-              title="Project Epsilon"
-              description="Customizable designs for every individual."
+              title="Energy-Efficient Glass"
+              description="Sustainable options that reduce energy consumption and enhance comfort."
               header={
                 <Image
-                  src="/hero-background.png"
+                  src="/bathroom.png"
                   alt="Project Epsilon"
                   width={600}
                   height={360}
@@ -126,8 +126,8 @@ export default function AboutUsPage() {
             />
             <BentoGridItem
               key="project-zeta"
-              title="Project Zeta"
-              description="Sustainable practices in eyewear manufacturing."
+              title="Glass Partitions & Doors"
+              description="Stylish and space-saving glass solutions for modern interiors."
               header={
                 <Image
                   src="/aboutbg.png"
@@ -140,11 +140,11 @@ export default function AboutUsPage() {
             />
             <BentoGridItem
               key="project-eta"
-              title="Project Eta"
-              description="Future-forward eyewear technology."
+              title="Architectural Glass"
+              description="Large-scale glass facades and structural glass for iconic buildings."
               header={
                 <Image
-                  src="/amber-logo.png"
+                  src="/bento5.jpeg"
                   alt="Project Eta"
                   width={600}
                   height={360}
