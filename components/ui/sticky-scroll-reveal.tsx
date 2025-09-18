@@ -19,20 +19,14 @@ export const StickyScroll = ({
   const ref = useRef<any>(null)
   const { scrollYProgress } = useScroll({
     container: ref,
-    offset: ["start start", "end start"],
+    offset: ["start start", "end start"], // Reverted offset
   })
 
   const cardLength = content.length
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    const cardsBreakpoints = content.map((_, index) => {
-      
-      if (index === 0) return 0.1 
-      if (index === cardLength - 1) return 0.9 
-      return (index + 0.3) / cardLength 
-    })
+    const cardsBreakpoints = content.map((_, index) => index / cardLength) // Simplified breakpoints
 
-    
     let closestBreakpointIndex = 0
     let minDistance = Math.abs(latest - cardsBreakpoints[0])
 
@@ -43,12 +37,7 @@ export const StickyScroll = ({
         closestBreakpointIndex = index
       }
     })
-
     
-    if (latest > 0.85) {
-      closestBreakpointIndex = cardLength - 1
-    }
-
     setActiveCard(closestBreakpointIndex)
   })
 
@@ -63,8 +52,7 @@ export const StickyScroll = ({
         scrollBehavior: "smooth",
       }}
     >
-      <div className="h-[20vh]" />
-      
+      {/* Left column: Sticky Text Content */}
       <div className="relative flex w-full items-start px-4">
         <div className="w-full">
           
@@ -119,7 +107,6 @@ export const StickyScroll = ({
           ))}
         </div>
       </div>
-           <div className="h-[80vh]" />
     </motion.div>
   )
 }
